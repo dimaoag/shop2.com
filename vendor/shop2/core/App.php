@@ -12,9 +12,9 @@ class App
     {
         $query = trim($_SERVER['REQUEST_URI'], "/");
         session_start();
-        echo '<br>' . $query . '<br>';
         self::$app = Registry::instance();
         $this->getParams();
+        new ErrorHendler();
     }
 
     /**

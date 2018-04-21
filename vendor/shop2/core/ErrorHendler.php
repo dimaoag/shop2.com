@@ -15,17 +15,31 @@ class ErrorHendler
         set_exception_handler([$this, 'exeptionHandler']);
     }
 
-
+    /**
+     * @param $e
+     */
     public function exeptionHandler($e){
         $this->logErrors($e->getMessage(), $e->getFile(), $e->getLine());
         $this->displayErrors('Exeption', $e->getMessage(), $e->getFile(), $e->getLine(), $e->getCode());
     }
 
+    /**
+     * @param string $message
+     * @param string $file
+     * @param string $line
+     */
     protected function logErrors($message = '', $file = '', $line = ''){
         error_log("[" . date('Y-m-d H:i:s') . "] Text error: {$message} | File: {$file} | Line: {$line} 
         \n====================='=\n", 3, ROOT . '/tmp/errors.log');
     }
 
+    /**
+     * @param $errorNumber
+     * @param $errorMessage
+     * @param $errorFile
+     * @param $errorLine
+     * @param int $responce
+     */
     protected function displayErrors($errorNumber, $errorMessage, $errorFile, $errorLine, $responce = 404){
         http_response_code($responce);
 

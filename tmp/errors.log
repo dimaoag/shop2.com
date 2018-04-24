@@ -103,3 +103,12 @@
 [2018-04-21 12:20:10] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 38 
         
 ====================='=
+[2018-04-24 18:41:33] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 38 
+        
+====================='=
+[2018-04-24 19:03:51] Text error: Action app\controllers\MainController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 43 
+        
+====================='=
+[2018-04-24 19:10:19] Text error: Controller app\controllers\admin\MainController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 52 
+        
+====================='=

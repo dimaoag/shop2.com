@@ -4,7 +4,9 @@ namespace shop2;
 
 class Router
 {
+    // all available routes
     protected static $routes = [];
+    // carrent route
     protected static $route = [];
 
 
@@ -31,14 +33,34 @@ class Router
     }
 
 
+    /**
+     * @param $url
+     * @throws \Exception
+     */
     public static function dispatch($url){
         if (self::matchRoute($url)){
-            echo $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
+            $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
+            if (class_exists($controller)){
+                $controllerObject = new $controller(self::$route);
+                $action = self::lowerCamelCase(self::$route['action']) . 'Action';
+                if (method_exists($controllerObject, $action)){
+                    $controllerObject->$action();
+                } else {
+                    throw new \Exception("Action $controller::$action not found", 404);
+                }
+            } else {
+                throw new \Exception("Controller $controller not found", 404);
+            }
         } else {
             throw new \Exception('Page not found', 404);
         }
     }
 
+
+    /**
+     * @param $url
+     * @return bool
+     */
     public static function matchRoute($url){
         foreach (self::$routes as $pattern => $route){
             if (preg_match("#{$pattern}#", $url, $matches)){
@@ -57,7 +79,6 @@ class Router
                 }
                 $route['controller'] = self::upperCamelCase($route['controller']);
                 self::$route = $route;
-                debug(self::$route);
                 return true;
             }
         }
@@ -65,17 +86,25 @@ class Router
     }
 
     //CamelCase for controllers
+    /**
+     * @param $name
+     * @return mixed
+     */
     protected static function upperCamelCase($name){
-        $name = str_replace('-', ' ', $name);
-        debug($name);
+        $name = str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
+        return $name;
     }
 
     //camelCase for actions
+
+    /**
+     * @param $name
+     * @return string
+     */
     protected static function lowerCamelCase($name){
-        
+        $name = lcfirst(self::upperCamelCase($name));
+        return $name;
     }
-
-
 
 
 }

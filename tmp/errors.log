@@ -112,3 +112,30 @@
 [2018-04-24 19:10:19] Text error: Controller app\controllers\admin\MainController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 52 
         
 ====================='=
+[2018-04-25 08:51:33] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 55 
+        
+====================='=
+[2018-04-25 08:51:48] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 55 
+        
+====================='=
+[2018-04-25 08:52:00] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 55 
+        
+====================='=
+[2018-04-25 08:52:05] Text error: Controller app\controllers\VendorController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 52 
+        
+====================='=
+[2018-04-25 08:52:15] Text error: Controller app\controllers\VendorController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 52 
+        
+====================='=
+[2018-04-25 11:03:58] Text error: Call to undefined function getMeta() | File: /var/www/shop2/app/views/layouts/default.php | Line: 8 
+        
+====================='=
+[2018-04-25 11:04:25] Text error: Call to undefined function getMeta() | File: /var/www/shop2/app/views/layouts/default.php | Line: 8 
+        
+====================='=
+[2018-04-25 11:04:37] Text error: Call to undefined function getMeta() | File: /var/www/shop2/app/views/layouts/default.php | Line: 8 
+        
+====================='=
+[2018-04-25 11:10:33] Text error: Layout /var/www/shop2/app/views/layouts/test.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 54 
+        
+====================='=

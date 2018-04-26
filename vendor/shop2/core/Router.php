@@ -38,6 +38,7 @@ class Router
      * @throws \Exception
      */
     public static function dispatch($url){
+        $url = self::removeQueryString($url);
         if (self::matchRoute($url)){
             $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
             if (class_exists($controller)){
@@ -105,6 +106,20 @@ class Router
     protected static function lowerCamelCase($name){
         $name = lcfirst(self::upperCamelCase($name));
         return $name;
+    }
+
+
+    protected static function removeQueryString($url){
+        //var_dump($url);
+//        debug($_GET);
+        if ($url){
+            $params = explode('?', $url, 2);
+            if (strpos($params[0], '=') === false){
+                return rtrim($params[0], '/');
+            } else {
+                return '';
+            }
+        }
     }
 
 

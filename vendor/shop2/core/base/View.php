@@ -17,6 +17,13 @@ class View
     public $meta = [];
 
 
+    /**
+     * View constructor.
+     * @param $route
+     * @param string $layout
+     * @param string $view
+     * @param $meta
+     */
     public function __construct($route, $layout = '', $view = '', $meta )
     {
         $this->route = $route;
@@ -37,6 +44,11 @@ class View
         }
     }
 
+
+    /**
+     * @param $data
+     * @throws \Exception
+     */
     public function render($data){
         if (is_array($data)){
             extract($data);
@@ -59,6 +71,10 @@ class View
         }
     }
 
+
+    /**
+     * @return string
+     */
     public function getMeta(){
 
         $meta = '<meta name="description" content="' . $this->meta['desc'] . '">' . PHP_EOL;

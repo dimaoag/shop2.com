@@ -23,15 +23,27 @@ abstract class Controller
 
     }
 
+    /**
+     * @throws \Exception
+     */
     public function getView(){
         $viewObject = new View($this->route, $this->layout, $this->view, $this->meta);
         $viewObject->render($this->data);
     }
 
+    /**
+     * @param $data
+     */
     public function setData($data){
         $this->data = $data;
     }
 
+
+    /**
+     * @param string $title
+     * @param string $desc
+     * @param string $keywords
+     */
     public function setMeta($title = '', $desc = '', $keywords = ''){
         $this->meta['title'] = $title;
         $this->meta['desc'] = $desc;

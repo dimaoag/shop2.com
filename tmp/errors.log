@@ -139,3 +139,15 @@
 [2018-04-25 11:10:33] Text error: Layout /var/www/shop2/app/views/layouts/test.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 54 
         
 ====================='=
+[2018-04-26 19:42:48] Text error: Controller app\controllers\PageController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 55 
+        
+====================='=
+[2018-04-26 19:45:08] Text error: Controller app\controllers\PageController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 55 
+        
+====================='=
+[2018-04-26 19:45:43] Text error: Controller app\controllers\PageController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 55 
+        
+====================='=
+[2018-04-26 19:46:00] Text error: Controller app\controllers\PageController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 55 
+        
+====================='=

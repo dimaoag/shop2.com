@@ -110,8 +110,6 @@ class Router
 
 
     protected static function removeQueryString($url){
-        //var_dump($url);
-//        debug($_GET);
         if ($url){
             $params = explode('?', $url, 2);
             if (strpos($params[0], '=') === false){
@@ -121,6 +119,5 @@ class Router
             }
         }
     }
-
 
 }

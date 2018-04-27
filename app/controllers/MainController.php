@@ -2,7 +2,7 @@
 namespace app\controllers;
 
 use shop2\App;
-
+use shop2\Cache;
 
 
 class MainController extends AppController
@@ -19,6 +19,10 @@ class MainController extends AppController
         $age = 25;
         $cities = ['London', 'Madrid', 'Paris'];
         $posts = \R::findAll('test');
+        $cache = Cache::instance();
+//        $cache->set('test', $cities);
+        $data = $cache->get('test');
+        debug($data);
         $this->setData(compact('name', 'age', 'cities', 'posts'));
 
 

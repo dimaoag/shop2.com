@@ -11,5 +11,16 @@
     <h1>Layout default</h1>
     <?= $content;?>
 
+
+
+
+
+<?php
+$logs = \R::getDatabaseAdapter()
+    ->getDatabase()
+    ->getLogger();
+
+print_r( $logs->grep( 'SELECT' ) );
+?>
 </body>
 </html>

@@ -18,7 +18,9 @@ class MainController extends AppController
         $name = 'John';
         $age = 25;
         $cities = ['London', 'Madrid', 'Paris'];
-        $this->setData(compact('name', 'age', 'cities'));
+        $posts = \R::findAll('test');
+        $this->setData(compact('name', 'age', 'cities', 'posts'));
+
 
     }
 

@@ -295,6 +295,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>
 <!--dropdown-->
 <script src="js/jquery.easydropdown.js"></script>
+
+<?php if ($_SERVER['REQUEST_URI'] == '/'): ?>
 <!--Slider-Starts-Here-->
 <script src="js/responsiveslides.min.js"></script>
 <script>
@@ -318,6 +320,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
 </script>
 <!--End-slider-script-->
+
+<?php endif; ?>
 
 </body>
 </html>

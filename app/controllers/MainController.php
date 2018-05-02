@@ -10,7 +10,9 @@ class MainController extends AppController
     //public $layout = 'test';
 
     public function indexAction(){
+        $brands = \R::find('brand', 'LIMIT 3');
         $this->setMeta('Home', 'Description', 'Keywords');
+        $this->setData(compact('brands'));
 
     }
 

@@ -2,6 +2,8 @@
 namespace app\widgets\currency;
 
 
+use shop2\App;
+
 class Currency
 {
     protected $tpl;  //шаблон вывода валюты
@@ -14,16 +16,26 @@ class Currency
         $this->run();
     }
 
+
     protected function run(){
+        $this->currencies = App::$app->getProperty('currencies');
+        $this->currency = App::$app->getProperty('currency');
 
-
-        $this->getHtml();
+        echo $this->getHtml();
     }
 
+    /**
+     * @return array
+     */
     public static function getCurrencies(){
         return \R::getAssoc("SELECT code, title, symbol_left, symbol_right, value, base FROM currency ORDER BY base DESC");
     }
 
+
+    /**
+     * @param $currencies
+     * @return mixed
+     */
     public static function getCurrency($currencies){
         if (isset($_COOKIE['currency']) && array_key_exists($_COOKIE['currency'], $currencies)){
             $key = $_COOKIE['currency'];
@@ -35,8 +47,14 @@ class Currency
         return $currency;
     }
 
-    protected function getHtml(){
 
+    /**
+     * @return string
+     */
+    protected function getHtml(){
+        ob_start();
+        require_once $this->tpl;
+        return ob_get_clean();
     }
 
 }

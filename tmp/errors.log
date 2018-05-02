@@ -25,3 +25,36 @@
 [2018-04-27 10:59:21] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
         
 ====================='=
+[2018-05-02 12:24:01] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:24:24] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:24:51] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:24:53] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:27:04] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:27:05] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:27:06] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:29:01] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-02 12:29:06] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:29:59] Text error: Class 'shop2\R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-02 12:33:02] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=

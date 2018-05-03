@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit05b7200b004b5f9293a953ea9fad0a88
+class ComposerStaticInitdd4cc948c8f59475eb152db381aa3af6
 {
     public static $prefixLengthsPsr4 = array (
         's' => 
@@ -87,6 +87,7 @@ class ComposerStaticInit05b7200b004b5f9293a953ea9fad0a88
         'RedBeanPHP\\Util\\QuickExport' => __DIR__ . '/..' . '/gabordemooij/redbean/RedBeanPHP/Util/QuickExport.php',
         'RedBeanPHP\\Util\\Transaction' => __DIR__ . '/..' . '/gabordemooij/redbean/RedBeanPHP/Util/Transaction.php',
         'app\\controllers\\AppController' => __DIR__ . '/../..' . '/app/controllers/AppController.php',
+        'app\\controllers\\CurrencyController' => __DIR__ . '/../..' . '/app/controllers/CurrencyController.php',
         'app\\controllers\\MainController' => __DIR__ . '/../..' . '/app/controllers/MainController.php',
         'app\\models\\AppModel' => __DIR__ . '/../..' . '/app/models/AppModel.php',
         'app\\widgets\\currency\\Currency' => __DIR__ . '/../..' . '/app/widgets/currency/Carrency.php',
@@ -105,9 +106,9 @@ class ComposerStaticInit05b7200b004b5f9293a953ea9fad0a88
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit05b7200b004b5f9293a953ea9fad0a88::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit05b7200b004b5f9293a953ea9fad0a88::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit05b7200b004b5f9293a953ea9fad0a88::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdd4cc948c8f59475eb152db381aa3af6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdd4cc948c8f59475eb152db381aa3af6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitdd4cc948c8f59475eb152db381aa3af6::$classMap;
 
         }, null, ClassLoader::class);
     }

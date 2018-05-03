@@ -370,3 +370,18 @@
 [2018-05-02 19:46:20] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
         
 ====================='=
+[2018-05-03 18:51:18] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-03 18:57:34] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-03 18:57:34] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-03 19:12:16] Text error: Class 'R' not found | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 13 
+        
+====================='=
+[2018-05-03 19:47:00] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 16 
+        
+====================='=

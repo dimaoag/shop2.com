@@ -56,6 +56,7 @@ return array(
     'RedBeanPHP\\Util\\QuickExport' => $vendorDir . '/gabordemooij/redbean/RedBeanPHP/Util/QuickExport.php',
     'RedBeanPHP\\Util\\Transaction' => $vendorDir . '/gabordemooij/redbean/RedBeanPHP/Util/Transaction.php',
     'app\\controllers\\AppController' => $baseDir . '/app/controllers/AppController.php',
+    'app\\controllers\\CurrencyController' => $baseDir . '/app/controllers/CurrencyController.php',
     'app\\controllers\\MainController' => $baseDir . '/app/controllers/MainController.php',
     'app\\models\\AppModel' => $baseDir . '/app/models/AppModel.php',
     'app\\widgets\\currency\\Currency' => $baseDir . '/app/widgets/currency/Carrency.php',

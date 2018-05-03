@@ -1,5 +1,5 @@
-/.idea/
+.idea/
 /.vagrant/
 /ubuntu-xenial-16.04-cloudimg-console.log
 vendor/
-!vendor/shop2/
+!/vendor/shop2/

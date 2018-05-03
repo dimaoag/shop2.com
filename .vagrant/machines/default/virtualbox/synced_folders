@@ -1,1 +1,0 @@
-{"virtualbox":{"/var/www/shop2":{"owner":"www-data","group":"www-data","guestpath":"/var/www/shop2","hostpath":"/home/dima/work/shop2.com","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/dima/work/shop2.com","disabled":false,"__vagrantfile":true}}}

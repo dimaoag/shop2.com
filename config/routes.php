@@ -1,6 +1,8 @@
 <?php
 use \shop2\Router;
 
+// product/view
+Router::add('^product/(?P<alias>[a-z0-9-]+)/?$', ['controller' => 'Product', 'action' => 'view']);
 
 
 

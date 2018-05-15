@@ -64,7 +64,7 @@
                             <h3><?= $hit->title; ?></h3>
                             <p>Explore Now</p>
                             <h4>
-                                <a class="add-to-cart" href="cart/add?id=<?= $hit->id; ?>"><i></i></a>
+                                <a class="add-to-cart" href="/cart/add?id=<?= $hit->id; ?>"><i></i></a>
                                 <span class=" item_price">
                                     <?= $currentCurrency['symbol_left']; ?>
                                     <?= round($hit->price * $currentCurrency['value'], 0); ?>

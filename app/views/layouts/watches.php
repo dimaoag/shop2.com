@@ -162,7 +162,7 @@
 <script src="/megamenu/js/megamenu.js"></script>
 
 
-<?php if ($_SERVER['REQUEST_URI'] == '/'): ?>
+<?php //if ($_SERVER['REQUEST_URI'] == '/'): ?>
     <!--Slider-Starts-Here-->
     <script src="/js/responsiveslides.min.js"></script>
     <script>
@@ -186,9 +186,9 @@
         });
     </script>
 <!--End-slider-script-->
-<?php endif; ?>
+<?php //endif; ?>
 
-<?php if (substr($_SERVER['REQUEST_URI'], 0, 9) == '/product/'): ?>
+<?php //if (substr($_SERVER['REQUEST_URI'], 0, 9) == '/product/'): ?>
     <script src="/js/imagezoom.js"></script>
     <script defer src="/js/jquery.flexslider.js"></script>
     <script>
@@ -219,7 +219,7 @@
             });
         });
     </script>
-<?php endif; ?>
+<?php //endif; ?>
 
 <script src="/js/main.js"></script>
 </body>

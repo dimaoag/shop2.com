@@ -16,7 +16,7 @@ class Currency
         $this->run();
     }
 
-    //ss
+
     protected function run(){
         $this->currencies = App::$app->getProperty('currencies');
         $this->currency = App::$app->getProperty('currency');

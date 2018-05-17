@@ -143,51 +143,51 @@
                         </li>
                     </ul>
                 </div>
-                <div class="latestproducts">
+                <!-- Related products start-->
+                <?php if ($relatedProducts): ?>
+                    <div class="latestproducts">
                     <div class="product-one">
-                        <div class="col-md-4 product-left p-left">
-                            <div class="product-main simpleCart_shelfItem">
-                                <a href="single.html" class="mask"><img class="img-responsive zoom-img" src="/images/p-1.png" alt="" /></a>
-                                <div class="product-bottom">
-                                    <h3>Smart Watches</h3>
-                                    <p>Explore Now</p>
-                                    <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-                                </div>
-                                <div class="srch">
-                                    <span>-50%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-left p-left">
-                            <div class="product-main simpleCart_shelfItem">
-                                <a href="single.html" class="mask"><img class="img-responsive zoom-img" src="/images/p-2.png" alt="" /></a>
-                                <div class="product-bottom">
-                                    <h3>Smart Watches</h3>
-                                    <p>Explore Now</p>
-                                    <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-                                </div>
-                                <div class="srch">
-                                    <span>-50%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 product-left p-left">
-                            <div class="product-main simpleCart_shelfItem">
-                                <a href="single.html" class="mask"><img class="img-responsive zoom-img" src="/images/p-3.png" alt="" /></a>
-                                <div class="product-bottom">
-                                    <h3>Smart Watches</h3>
-                                    <p>Explore Now</p>
-                                    <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-                                </div>
-                                <div class="srch">
-                                    <span>-50%</span>
+                        <h4>Also buying with this product: </h4>
+                        <?php foreach($relatedProducts as $relatedProduct): ?>
+                            <div class="col-md-4 product-left p-left">
+                                <div class="product-main simpleCart_shelfItem">
+                                    <a href="/product/<?= $relatedProduct['alias']; ?>" class="mask"><img class="img-responsive zoom-img" src="/images/<?= $relatedProduct['img']; ?>" alt="<?= $relatedProduct['img']; ?>"/></a>
+                                    <div class="product-bottom">
+                                        <h3><?= $relatedProduct['title']; ?></h3>
+                                        <p>Explore Now</p>
+                                        <h4><a class="item_add" href="/cart/add?id=<?= $relatedProduct['id']; ?>" data-id="<?= $relatedProduct['id']; ?>"><i></i></a>
+                                            <span class=" item_price">
+                                            <?= $currentCurrency['symbol_left']; ?>
+                                            <?= round($relatedProduct['price'] * $currentCurrency['value'], 0); ?>
+                                            <?= $currentCurrency['symbol_right']; ?>
+                                            </span>
+                                            <?php if ($relatedProduct['old_price'] > $relatedProduct['price']): ?>
+                                                <small>
+                                                    <del>
+                                                        <?= $currentCurrency['symbol_left']; ?>
+                                                        <?= round($relatedProduct['old_price'] * $currentCurrency['value'], 0); ?>
+                                                        <?= $currentCurrency['symbol_right']; ?>
+                                                    </del>
+                                                </small>
+                                            <?php endif; ?>
+                                        </h4>
+                                    </div>
+                                    <?php if ($relatedProduct['old_price'] > $relatedProduct['price']): ?>
+                                        <div class="srch">
+                                            <span>-<?php $sale = 100 - (($relatedProduct['price']/$relatedProduct['old_price'])*100); echo round($sale, 1); ?>%</span>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                <?php endif; ?>
+                <!-- Related products end-->
             </div>
+
+            <!-- Modification start-->
             <div class="col-md-3 single-right">
                 <div class="w_sidebar">
                     <section  class="sky-form">
@@ -268,6 +268,7 @@
                 </div>
             </div>
             <div class="clearfix"> </div>
+            <!-- Modification start-->
         </div>
     </div>
 </div>

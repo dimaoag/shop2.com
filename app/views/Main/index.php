@@ -59,12 +59,12 @@
                 <?php foreach ($hits as $hit):?>
                     <div class="col-md-3 product-left">
                     <div class="product-main simpleCart_shelfItem">
-                        <a href="product/<?= $hit->alias; ?>" class="mask"><img class="img-responsive zoom-img" src="images/<?= $hit->img; ?>" alt="<?= $hit->img; ?>" /></a>
+                        <a href="/product/<?= $hit->alias; ?>" class="mask"><img class="img-responsive zoom-img" src="/images/<?= $hit->img; ?>" alt="<?= $hit->img; ?>" /></a>
                         <div class="product-bottom">
                             <h3><?= $hit->title; ?></h3>
                             <p>Explore Now</p>
                             <h4>
-                                <a class="add-to-cart" href="/cart/add?id=<?= $hit->id; ?>"><i></i></a>
+                                <a class="add-to-cart" href="/cart/add?id=<?= $hit->id; ?>" data-id="<?= $hit->id; ?>"><i></i></a>
                                 <span class=" item_price">
                                     <?= $currentCurrency['symbol_left']; ?>
                                     <?= round($hit->price * $currentCurrency['value'], 0); ?>

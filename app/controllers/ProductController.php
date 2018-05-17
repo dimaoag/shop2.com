@@ -14,7 +14,7 @@ class ProductController extends AppController
         // breadcrumbs
 
         // related products
-
+        $relatedProducts = \R::getAll("SELECT * FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$product->id]);
         // запись в куки запрошеного товара
 
         // viewed products
@@ -24,6 +24,6 @@ class ProductController extends AppController
         // modifications of product
 
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->setData(compact('product'));
+        $this->setData(compact('product', 'relatedProducts'));
     }
 }

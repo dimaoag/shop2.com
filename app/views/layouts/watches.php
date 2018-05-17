@@ -231,5 +231,13 @@
 <?php endif; ?>
 
 <script src="/js/main.js"></script>
+
+<?php
+$logs = \R::getDatabaseAdapter()
+    ->getDatabase()
+    ->getLogger();
+
+debug( $logs->grep( 'SELECT' ) );
+?>
 </body>
 </html>

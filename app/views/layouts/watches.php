@@ -9,6 +9,7 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/megamenu/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/megamenu/css/ionicons.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/number_Input_Spinner/jquery.nice-number.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
 </head>
 <body>
@@ -162,7 +163,7 @@
 <script src="/megamenu/js/megamenu.js"></script>
 
 
-<?php //if ($_SERVER['REQUEST_URI'] == '/'): ?>
+<?php if ($_SERVER['REQUEST_URI'] == '/'): ?>
     <!--Slider-Starts-Here-->
     <script src="/js/responsiveslides.min.js"></script>
     <script>
@@ -186,9 +187,9 @@
         });
     </script>
 <!--End-slider-script-->
-<?php //endif; ?>
+<?php endif; ?>
 
-<?php //if (substr($_SERVER['REQUEST_URI'], 0, 9) == '/product/'): ?>
+<?php if (substr($_SERVER['REQUEST_URI'], 0, 9) == '/product/'): ?>
     <script src="/js/imagezoom.js"></script>
     <script defer src="/js/jquery.flexslider.js"></script>
     <script>
@@ -219,7 +220,15 @@
             });
         });
     </script>
-<?php //endif; ?>
+
+    <script src="/number_Input_Spinner/jquery.nice-number.min.js"></script>
+    <script>
+        $(function(){
+            $('.nice-number input').niceNumber();
+        });
+    </script>
+
+<?php endif; ?>
 
 <script src="/js/main.js"></script>
 </body>

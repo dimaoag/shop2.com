@@ -3074,3 +3074,36 @@ ul.tag-men {
 .quantity{
 	margin-top: 20px;
 }
+
+.quantity input{
+	border: none;
+	outline: none;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 0 5px !important;
+	box-shadow: 0 2px 5px rgba(0,0,0,.5);
+	font-weight: bold;
+}
+
+.quantity input:hover,
+.quantity input:focus{
+	background-color: black;
+	color: white;
+}
+
+.quantity button{
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	width: 50px;
+}
+.quantity label{
+	margin-top: 5px;
+	margin-right: 10px;
+}
+
+.quantity button:focus
+{
+	outline: none;
+}

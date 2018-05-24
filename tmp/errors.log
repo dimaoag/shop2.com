@@ -1321,3 +1321,6 @@
 [2018-05-17 15:26:07] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
         
 ====================='=
+[2018-05-24 18:09:20] Text error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shop2.galley' doesn't exist | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

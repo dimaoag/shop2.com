@@ -1324,3 +1324,276 @@
 [2018-05-24 18:09:20] Text error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shop2.galley' doesn't exist | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
         
 ====================='=
+[2018-05-24 18:39:55] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:40:06] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:44:09] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:47:11] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:50:10] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:50:14] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:50:17] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:50:27] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:50:30] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:50:37] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:50:46] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:52:47] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:54:07] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:54:43] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:55:08] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:55:11] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:55:21] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:55:23] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:55:54] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:56:04] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:56:22] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:56:24] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:56:26] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:56:52] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:59:06] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:59:22] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:59:33] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:59:46] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:59:51] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 18:59:56] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:01:59] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:02:44] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:14:21] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:15:14] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:19:13] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:22:50] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:30:22] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:30:37] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:30:56] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:31:10] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:31:12] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:31:28] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:31:31] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:31:47] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:31:49] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:31:54] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:46:57] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:47:56] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:48:02] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:48:56] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:49:07] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:49:10] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:49:16] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:49:47] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:49:49] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:51:50] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:51:52] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:52:20] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:53:19] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:53:26] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:54:52] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:54:58] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:55:01] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:56:52] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:56:54] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:58:56] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:58:59] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 19:59:34] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:01:49] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:05:16] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:07:16] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:07:50] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:08:37] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:08:54] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:10:16] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:14:26] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:14:43] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:14:48] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:14:54] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:14:58] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:15:05] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:23:54] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:24:00] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:24:16] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:24:42] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:26:19] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-05-24 20:32:59] Text error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-05-24 20:33:49] Text error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-05-24 20:33:54] Text error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-05-24 20:33:56] Text error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-05-24 20:35:25] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=

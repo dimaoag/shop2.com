@@ -2,6 +2,8 @@
 namespace app\controllers;
 
 
+use app\models\Product;
+
 class ProductController extends AppController
 {
     public function viewAction(){
@@ -15,15 +17,25 @@ class ProductController extends AppController
 
         // related products
         $relatedProducts = \R::getAll("SELECT * FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$product->id]);
-        // запись в куки запрошеного товара
 
-        // viewed products
+        // запись в куки запрошеного товара
+        $productModel = new Product();
+        $productModel->setRecentlyViewed($product->id);
+
+
+        // recently viewed products
+        $recentlyViewed = $productModel->getRecentlyViewed();
+        $recentlyViewedProducts = null;
+        if ($recentlyViewed){
+            $recentlyViewedProducts = $recentlyViewed;
+        }
 
         // gallery images for product
         $gallery = \R::findAll('gallery', 'product_id = ?', [$product->id]);
+
         // modifications of product
 
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->setData(compact('product', 'relatedProducts', 'gallery'));
+        $this->setData(compact('product', 'relatedProducts', 'gallery', 'recentlyViewedProducts'));
     }
 }

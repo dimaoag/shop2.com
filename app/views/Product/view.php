@@ -192,6 +192,51 @@
                 </div>
                 <?php endif; ?>
                 <!-- Related products end-->
+
+                <!-- Recently viewed products start-->
+                <?php if ($recentlyViewedProducts): ?>
+                    <div class="latestproducts">
+                        <div class="product-one">
+                            <h4>Recently viewed products: </h4>
+                            <?php foreach($recentlyViewedProducts as $recentlyViewedProduct): ?>
+                                <div class="col-md-4 product-left p-left">
+                                    <div class="product-main simpleCart_shelfItem">
+                                        <a href="/product/<?= $recentlyViewedProduct->alias ?>" class="mask">
+                                            <img class="img-responsive zoom-img" src="/images/<?= $recentlyViewedProduct->img; ?>" alt="<?= $recentlyViewedProduct->img; ?>"/></a>
+                                        <div class="product-bottom">
+                                            <h3><?= $recentlyViewedProduct->title; ?></h3>
+                                            <p>Explore Now</p>
+                                            <h4><a class="item_add" href="/cart/add?id=<?= $recentlyViewedProduct->id; ?>" data-id="<?= $recentlyViewedProduct->id; ?>"><i></i></a>
+                                                <span class=" item_price">
+                                            <?= $currentCurrency['symbol_left']; ?>
+                                            <?= round($recentlyViewedProduct->price * $currentCurrency['value'], 0); ?>
+                                            <?= $currentCurrency['symbol_right']; ?>
+                                            </span>
+                                                <?php if ($recentlyViewedProduct->old_price > $recentlyViewedProduct->price): ?>
+                                                    <small>
+                                                        <del>
+                                                            <?= $currentCurrency['symbol_left']; ?>
+                                                            <?= round($recentlyViewedProduct->old_price * $currentCurrency['value'], 0); ?>
+                                                            <?= $currentCurrency['symbol_right']; ?>
+                                                        </del>
+                                                    </small>
+                                                <?php endif; ?>
+                                            </h4>
+                                        </div>
+                                        <?php if ($recentlyViewedProduct->old_price > $recentlyViewedProduct->price): ?>
+                                            <div class="srch">
+                                                <span>-<?php $sale = 100 - (($recentlyViewedProduct->price/$recentlyViewedProduct->old_price)*100); echo round($sale, 1); ?>%</span>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <!-- Recently viewed products end-->
+
             </div>
 
             <!-- Modification start-->

@@ -15,4 +15,4 @@ $app_path = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['PHP_SELF']}";
 define("PATH", $app_path);
 define("ADMIN", $app_path . "/admin");
 
-require_once ROOT . "/vendor/autoload.php";
+require ROOT . "/vendor/autoload.php";

@@ -19,17 +19,17 @@ sudo apt-get -y install nginx
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 
-sudo apt-get -y install php7.1 php7.1-cli php7.1-fpm php7.1-gd php7.1-json php7.1-mysql php7.1-readline php7.1-common php7.1-cgi php7.1-mbstring php7.1-curl php7.1-xml php7.1-xdebug php7.1-intl php7.1-bz2 php7.1-mcrypt php7.1-zip php7.1-imagick php7.1-tidy php-redis php-memcached
+sudo apt-get -y install php7.0 php7.0-cli php7.0-fpm php7.0-gd php7.0-json php7.0-mysql php7.0-readline php7.0-common php7.0-cgi php7.0-mbstring php7.0-curl php7.0-xml php7.0-xdebug php7.0-intl php7.0-bz2 php7.0-mcrypt php7.0-zip php7.0-imagick php7.0-tidy php-redis php-memcached
 
 echo "mysql-server mysql-server/root_password password 1111" | sudo debconf-set-selections
 echo "mysql-server mysql-server/root_password_again password 1111" | sudo debconf-set-selections
 
 apt-get -y install mysql-server
 
-sed -i s/\;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/ /etc/php/7.1/fpm/php.ini
-sed -i s/display_errors\ =\ Off/display_errors\ =\ On/ /etc/php/7.1/fpm/php.ini
-sed -i s/max_execution_time\ =\ 30/max_execution_time\ =\ 300/ /etc/php/7.1/fpm/php.ini
-sed -i s/listen\ =\ 127.0.0.1:9000/listen\ =\ \\/var\\/run\\/php\\/php7.1-fpm.sock/ /etc/php/7.1/fpm/pool.d/www.conf
+sed -i s/\;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/ /etc/php/7.0/fpm/php.ini
+sed -i s/display_errors\ =\ Off/display_errors\ =\ On/ /etc/php/7.0/fpm/php.ini
+sed -i s/max_execution_time\ =\ 30/max_execution_time\ =\ 300/ /etc/php/7.0/fpm/php.ini
+sed -i s/listen\ =\ 127.0.0.1:9000/listen\ =\ \\/var\\/run\\/php\\/php7.0-fpm.sock/ /etc/php/7.0/fpm/pool.d/www.conf
 
 sudo apt-get install phpmyadmin
 
@@ -37,7 +37,7 @@ sudo echo 'server {
     set $web "/var/www/shop2";
     set $index "index.php";
     set $charset "utf-8";
-    set $fcp "unix:/var/run/php/php7.1-fpm.sock";
+    set $fcp "unix:/var/run/php/php7.0-fpm.sock";
 
     listen  80;
     server_name shop2.com;
@@ -87,7 +87,7 @@ sudo echo 'server {
            location ~ ^/phpmyadmin/(.+\.php)$ {
                    try_files $uri =404;
                    root /usr/share/;
-                   fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+                   fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
                    fastcgi_index index.php;
                    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
                    include /etc/nginx/fastcgi_params;
@@ -101,7 +101,7 @@ sudo echo 'server {
                    rewrite ^/* /phpmyadmin last;
         }
 
-}' > /etc/nginx/sites-available/insta.com
+}' > /etc/nginx/sites-available/shop2.com
 
 
 echo 'zend_extension=xdebug.so
@@ -112,10 +112,10 @@ xdebug.remote_host="192.168.56.1"
 xdebug.remote_port=9001
 xdebug.remote_mode=req
 xdebug.idekey="PHPSTORM"
-' > /etc/php/7.1/mods-available/xdebug.ini
+' > /etc/php/7.0/mods-available/xdebug.ini
 
 sudo service nginx restart
-sudo service php7.1-fpm restart
+sudo service php7.0-fpm restart
 sudo service mysql restart
 echo '
 ----------------------------------------

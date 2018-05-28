@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "shop2\\": "core",
+      "shop2\\": "vendor/shop2/core",
       "app\\": "app"
     }
   },

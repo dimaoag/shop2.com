@@ -2,6 +2,7 @@
 namespace app\controllers;
 
 
+use app\models\Breadcrumbs;
 use app\models\Product;
 
 class ProductController extends AppController
@@ -14,6 +15,8 @@ class ProductController extends AppController
         }
 
         // breadcrumbs
+        $breadcrumbs = Breadcrumbs::getBreadcrumbs($product->category_id, $product->title);
+
 
         // related products
         $relatedProducts = \R::getAll("SELECT * FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$product->id]);
@@ -36,6 +39,6 @@ class ProductController extends AppController
         // modifications of product
 
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->setData(compact('product', 'relatedProducts', 'gallery', 'recentlyViewedProducts'));
+        $this->setData(compact('product', 'relatedProducts', 'gallery', 'recentlyViewedProducts', 'breadcrumbs'));
     }
 }

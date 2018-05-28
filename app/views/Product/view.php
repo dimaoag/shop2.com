@@ -1,15 +1,21 @@
-<!--start-breadcrumbs-->
-<div class="breadcrumbs">
+<?php if ($breadcrumbs): ?>
+    <!--start-breadcrumbs-->
+<div class="breadcrum/bs">
     <div class="container">
         <div class="breadcrumbs-main">
             <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Single</li>
+                <li><a href="/">Home</a></li>
+                <?php  foreach ($breadcrumbs as $alias => $title):?>
+                <li><a href="/category/<?= $alias ?>"><?= $title ?></a></li>
+                <?php endforeach; ?>
+                <li><a href="/product/<?= $product->alias; ?>"><?= $product->title; ?></a></li>
             </ol>
         </div>
     </div>
 </div>
-<!--end-breadcrumbs-->
+    <!--end-breadcrumbs-->
+<?php endif; ?>
+
 <!--start-single-->
 <div class="single contact">
     <div class="container">

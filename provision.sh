@@ -34,7 +34,7 @@ sed -i s/listen\ =\ 127.0.0.1:9000/listen\ =\ \\/var\\/run\\/php\\/php7.0-fpm.so
 sudo apt-get install phpmyadmin
 
 sudo echo 'server {
-    set $web "/var/www/shop2";
+    set $web "/var/www/shop2/public";
     set $index "index.php";
     set $charset "utf-8";
     set $fcp "unix:/var/run/php/php7.0-fpm.sock";

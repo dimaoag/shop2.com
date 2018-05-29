@@ -1,5 +1,5 @@
+<!--start-breadcrumbs-->
 <?php if ($breadcrumbs): ?>
-    <!--start-breadcrumbs-->
 <div class="breadcrum/bs">
     <div class="container">
         <div class="breadcrumbs-main">
@@ -13,8 +13,8 @@
         </div>
     </div>
 </div>
-    <!--end-breadcrumbs-->
 <?php endif; ?>
+<!--end-breadcrumbs-->
 
 <!--start-single-->
 <div class="single contact">
@@ -52,23 +52,12 @@
                     <div class="col-md-7 single-top-right">
                         <div class="single-para simpleCart_shelfItem">
                             <h2><?= $product->title; ?></h2>
-                            <div class="star-on">
-                                <ul class="star-footer">
-                                    <li><a href="#"><i> </i></a></li>
-                                    <li><a href="#"><i> </i></a></li>
-                                    <li><a href="#"><i> </i></a></li>
-                                    <li><a href="#"><i> </i></a></li>
-                                    <li><a href="#"><i> </i></a></li>
-                                </ul>
-                                <div class="review">
-                                    <a href="#"> 1 customer review </a>
-
-                                </div>
-                                <div class="clearfix"> </div>
-                            </div>
-                            <h5 class="item_price">
+                            <div class="star-on"></div>
+                            <h5 class="item_price" id="base-price" data-base="<?= round($product->price * $currentCurrency['value'], 0); ?>">
                                 <?= $currentCurrency['symbol_left']; ?>
-                                <?= round($product->price * $currentCurrency['value'], 0); ?>
+                                <span>
+                                    <?= round($product->price * $currentCurrency['value'], 0); ?>
+                                </span>
                                 <?= $currentCurrency['symbol_right']; ?>
                                 <?php if ($product->old_price): ?>
                                     <small>
@@ -81,25 +70,26 @@
                                 <?php endif; ?>
                             </h5>
                             <?= $product->content; ?>
+                            <!-- Modification of color product start -->
                             <div class="available">
                                 <ul>
                                     <li>Color
                                         <select>
-                                            <option>Silver</option>
-                                            <option>Black</option>
-                                            <option>Dark Black</option>
-                                            <option>Red</option>
-                                        </select></li>
-                                    <li class="size-in">Size<select>
-                                            <option>Large</option>
-                                            <option>Medium</option>
-                                            <option>small</option>
-                                            <option>Large</option>
-                                            <option>small</option>
+                                            <option>Choose color</option>
+                                            <?php if ($modProductByColor): ?>
+                                                <?php foreach ($modProductByColor as $item): ?>
+                                                    <option data-title="<?=$item->title;?>"
+                                                            data-price="<?=$item->price*$currentCurrency['value'];?>"
+                                                            value="<?=$item->id;?>">
+                                                        <?=$item->title;?>
+                                                    </option>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </select></li>
                                     <div class="clearfix"> </div>
                                 </ul>
                             </div>
+                            <!-- Modification of color product end -->
                             <ul class="tag-men">
                                 <li><span>CATEGORY: </span>
                                     <span>

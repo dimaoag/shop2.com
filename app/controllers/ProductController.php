@@ -9,22 +9,22 @@ class ProductController extends AppController
 {
     public function viewAction(){
         $alias = $this->route['alias'];
-        $product = \R::findOne('product', "alias = ? AND status = '1'", [$alias]);
+        $productModel = new Product();
+
+        // get product
+        $product = $productModel->getProductByAlias($alias);
         if (!$product){
             throw new \Exception('Product not found', 404);
         }
 
+        // запись в куки запрошеного товара
+        $productModel->setRecentlyViewed($product->id);
+
         // breadcrumbs
         $breadcrumbs = Breadcrumbs::getBreadcrumbs($product->category_id, $product->title);
 
-
         // related products
-        $relatedProducts = \R::getAll("SELECT * FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$product->id]);
-
-        // запись в куки запрошеного товара
-        $productModel = new Product();
-        $productModel->setRecentlyViewed($product->id);
-
+        $relatedProducts = $productModel->getRelatedProducts($product->id);
 
         // recently viewed products
         $recentlyViewed = $productModel->getRecentlyViewed();
@@ -34,11 +34,13 @@ class ProductController extends AppController
         }
 
         // gallery images for product
-        $gallery = \R::findAll('gallery', 'product_id = ?', [$product->id]);
+        $gallery = $productModel->getGallery($product->id);
 
         // modifications of product
+        $modProductByColor = $productModel->getModProductByColor($product->id);
+
 
         $this->setMeta($product->title, $product->description, $product->keywords);
-        $this->setData(compact('product', 'relatedProducts', 'gallery', 'recentlyViewedProducts', 'breadcrumbs'));
+        $this->setData(compact('product', 'relatedProducts', 'gallery', 'recentlyViewedProducts', 'breadcrumbs', 'modProductByColor'));
     }
 }

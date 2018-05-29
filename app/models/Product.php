@@ -11,7 +11,14 @@ class Product extends AppModel {
     protected $LatestViewedProducts = 3;
 
 
-
+    /**
+     * @param $alias
+     * @return NULL|\RedBeanPHP\OODBBean
+     */
+    public function getProductByAlias($alias){
+        $product = \R::findOne('product', "alias = ? AND status = '1'", [$alias]);
+        return $product;
+    }
 
 
     /**
@@ -62,7 +69,14 @@ class Product extends AppModel {
     }
 
 
-
+    /**
+     * @param $product_id
+     * @return array
+     */
+    public function getGallery($product_id){
+        $gallery = \R::findAll('gallery', 'product_id = ?', [$product_id]);
+        return $gallery;
+    }
 
 
 
@@ -77,5 +91,18 @@ class Product extends AppModel {
     }
 
 
+    /**
+     * @param $product_id
+     * @return array
+     */
+    public function getRelatedProducts($product_id){
+        $relatedProducts = \R::getAll("SELECT * FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$product_id]);
+        return $relatedProducts;
+    }
+
+    public function getModProductByColor($product_id){
+        $modProductByColor = \R::findAll('modification', 'product_id = ?', [$product_id]);
+        return $modProductByColor;
+    }
 
 }

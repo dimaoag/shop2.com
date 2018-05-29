@@ -155,7 +155,6 @@
 </div>
 <!--footer-end-->
 
-<!--start-menu-->
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/simpleCart.min.js"> </script>
 <!--dropdown-->

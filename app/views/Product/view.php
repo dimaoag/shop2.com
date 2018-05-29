@@ -158,7 +158,7 @@
                                     <div class="product-bottom">
                                         <h3><?= $relatedProduct['title']; ?></h3>
                                         <p>Explore Now</p>
-                                        <h4><a class="item_add" href="/cart/add?id=<?= $relatedProduct['id']; ?>" data-id="<?= $relatedProduct['id']; ?>"><i></i></a>
+                                        <h4><a class="item_add add-to-cart" href="/cart/add?id=<?= $relatedProduct['id']; ?>" data-id="<?= $relatedProduct['id']; ?>"><i></i></a>
                                             <span class=" item_price">
                                             <?= $currentCurrency['symbol_left']; ?>
                                             <?= round($relatedProduct['price'] * $currentCurrency['value'], 0); ?>
@@ -202,7 +202,7 @@
                                         <div class="product-bottom">
                                             <h3><?= $recentlyViewedProduct->title; ?></h3>
                                             <p>Explore Now</p>
-                                            <h4><a class="item_add" href="/cart/add?id=<?= $recentlyViewedProduct->id; ?>" data-id="<?= $recentlyViewedProduct->id; ?>"><i></i></a>
+                                            <h4><a class="item_add add-to-cart" href="/cart/add?id=<?= $recentlyViewedProduct->id; ?>" data-id="<?= $recentlyViewedProduct->id; ?>"><i></i></a>
                                                 <span class=" item_price">
                                             <?= $currentCurrency['symbol_left']; ?>
                                             <?= round($recentlyViewedProduct->price * $currentCurrency['value'], 0); ?>

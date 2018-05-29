@@ -10,13 +10,13 @@
     <div  id="top" class="callbacks_container">
         <ul class="rslides callbacks callbacks1" id="slider4">
             <li>
-                <img src="images/bnr-1.jpg" alt=""/>
+                <img src="/images/bnr-1.jpg" alt=""/>
             </li>
             <li>
-                <img src="images/bnr-2.jpg" alt=""/>
+                <img src="/images/bnr-2.jpg" alt=""/>
             </li>
             <li>
-                <img src="images/bnr-3.jpg" alt=""/>
+                <img src="/images/bnr-3.jpg" alt=""/>
             </li>
         </ul>
     </div>

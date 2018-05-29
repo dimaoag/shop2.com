@@ -1,7 +1,7 @@
 //cart
-$('body').on('click', '.add-to-cart', function (event) {
-    event.preventDefault();
-    let id = $(this).data('id'),
+$('body').on('click', '.add-to-cart', function (e) {
+    e.preventDefault();
+    var id = $(this).data('id'),
         qty = $('.quantity input').val() ? $('.quantity input').val() : 1,
         mod = $('.available select').val();
 
@@ -17,7 +17,7 @@ $('body').on('click', '.add-to-cart', function (event) {
             showCart(data);
         },
         error: function () {
-            alert("Error!!! Try again later.")
+            alert("Error!!! Try again later.");
         }
     });
 });
@@ -28,7 +28,8 @@ function showCart(cart){
 
 
 //change current currency
-$('#currency').change(function () {
+$('#currency').change(function (e) {
+    e.preventDefault();
     window.location = '/currency/change/?curr=' + $(this).val();
 });
 

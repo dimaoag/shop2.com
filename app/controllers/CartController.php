@@ -1,6 +1,7 @@
 <?php
 namespace app\controllers;
 
+use app\models\Cart;
 
 class CartController extends AppController {
 
@@ -10,6 +11,8 @@ class CartController extends AppController {
         $modId = !empty($_GET['mod']) ? (int)$_GET['mod'] : null;
         $mod = null;
 
+
+
         if ($id){
             $product = \R::findOne('product', 'id = ?', [$id]);
             if (!$product){
@@ -18,10 +21,14 @@ class CartController extends AppController {
             if ($modId){
                 $mod = \R::findOne('modification', 'id = ? AND product_id = ?', [$modId, $id]);
             }
-            debug($mod);
         }
-        die();
 
+        $cart = new Cart();
+        $cart->addToCart($product, $qty, $mod);
+        if ($this->isAjax()){
+            $this->loadView('cart_modal');
+        }
+        redirect();
     }
 
 

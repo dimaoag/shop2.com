@@ -2,9 +2,6 @@
 namespace shop2\base;
 
 
-
-use shop2\App;
-
 class View
 {
     public $route;
@@ -36,11 +33,12 @@ class View
         if ($layout === false){
             $this->layout = false;
         } else {
-            if ($layout){
-                $this->layout = $layout;
-            } else {
-                $this->layout = LAYOUT;
-            }
+            $this->layout = $layout ?: LAYOUT;
+//            if ($layout){
+//                $this->layout = $layout;
+//            } else {
+//                $this->layout = LAYOUT;
+//            }
         }
     }
 
@@ -53,7 +51,7 @@ class View
         if (is_array($data)){
             extract($data);
         }
-        $viewPath = \APP . "/views/{$this->prefix}{$this->controller}/{$this->view}" . ".php";
+        $viewPath = APP . "/views/{$this->prefix}{$this->controller}/{$this->view}.php";
         if (is_file($viewPath)){
             ob_start(); // include buffering
             require_once $viewPath;
@@ -61,8 +59,8 @@ class View
         } else {
             throw new \Exception("View $viewPath not found", 500);
         }
-        if ($this->layout !== false){
-            $layoutPath = \APP . "/views/layouts/{$this->layout}" . ".php";
+        if (false !== $this->layout){
+            $layoutPath = APP . "/views/layouts/{$this->layout}.php";
             if (is_file($layoutPath)){
                 require_once $layoutPath;
             } else {

@@ -88,6 +88,7 @@
 <!--bottom-header-->
 
 <div class="content">
+    <?php  debug($_SESSION); ?>
     <?= $content; ?>
 </div>
 
@@ -156,8 +157,6 @@
 <!--footer-end-->
 
 <script src="/js/jquery-1.11.0.min.js"></script>
-<script src="/js/simpleCart.min.js"> </script>
-<!--dropdown-->
 <script src="/js/jquery.easydropdown.js"></script>
 <script src="/megamenu/js/megamenu.js"></script>
 

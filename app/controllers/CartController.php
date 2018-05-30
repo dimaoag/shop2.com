@@ -11,8 +11,6 @@ class CartController extends AppController {
         $modId = !empty($_GET['mod']) ? (int)$_GET['mod'] : null;
         $mod = null;
 
-
-
         if ($id){
             $product = \R::findOne('product', 'id = ?', [$id]);
             if (!$product){

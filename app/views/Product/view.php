@@ -71,12 +71,13 @@
                             </h5>
                             <?= $product->content; ?>
                             <!-- Modification of color product start -->
+                            <?php if ($modProductByColor): ?>
                             <div class="available">
                                 <ul>
                                     <li>Color
                                         <select>
                                             <option>Choose color</option>
-                                            <?php if ($modProductByColor): ?>
+
                                                 <?php foreach ($modProductByColor as $item): ?>
                                                     <option data-title="<?=$item->title;?>"
                                                             data-price="<?=$item->price*$currentCurrency['value'];?>"
@@ -84,11 +85,12 @@
                                                         <?=$item->title;?>
                                                     </option>
                                                 <?php endforeach; ?>
-                                            <?php endif; ?>
+
                                         </select></li>
                                     <div class="clearfix"> </div>
                                 </ul>
                             </div>
+                            <?php endif; ?>
                             <!-- Modification of color product end -->
                             <ul class="tag-men">
                                 <li><span>CATEGORY: </span>

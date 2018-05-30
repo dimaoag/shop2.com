@@ -2515,3 +2515,6 @@
 [2018-05-30 17:57:43] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
         
 ====================='=
+[2018-05-30 20:27:25] Text error: Action app\controllers\CartController::deleteAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=

@@ -35,17 +35,31 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
+            <!--cart-->
             <div class="col-md-6 top-header-left">
                 <div class="cart box_1">
-                    <a href="checkout.html">
+                    <a href="/cart/show" onclick="getCart(); return false;">
                         <div class="total">
-                            <span class="simpleCart_total"></span></div>
-                        <img src="/images/cart-1.png" alt="" />
+                            <?php if (!empty($_SESSION['cart'])): ?>
+                                <span class="simpleCart_total">
+                                    <?=$_SESSION['cart_currency']['symbol_left'] . $_SESSION['cart_sum'] . $_SESSION['cart_currency']['symbol_right']?>
+                                </span>
+                            <?php else: ?>
+                                <span class="simpleCart_total">Empty Cart</span>
+                            <?php endif; ?>
+                            <img src="/images/cart-1.png" alt="" />
+                        </div>
                     </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-                    <div class="clearfix"> </div>
+<!--                    <a href="checkout.html">-->
+<!--                        <div class="total">-->
+<!--                            <span class="simpleCart_total"></span></div>-->
+<!--                        <img src="/images/cart-1.png" alt="" />-->
+<!--                    </a>-->
+<!--                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>-->
+<!--                    <div class="clearfix"> </div>-->
                 </div>
             </div>
+            <!--cart-->
             <div class="clearfix"></div>
         </div>
     </div>

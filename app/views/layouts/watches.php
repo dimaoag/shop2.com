@@ -88,7 +88,7 @@
 <!--bottom-header-->
 
 <div class="content">
-    <?php  debug($_SESSION); ?>
+<!--    --><?php // debug($_SESSION); ?>
     <?= $content; ?>
 </div>
 
@@ -156,7 +156,29 @@
 </div>
 <!--footer-end-->
 
+<!--modal window start-->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Cart</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Continue buying</button>
+                <a href="/cart/view" type="button" class="btn btn-primary" id="checkout">Checkout</a>
+                <button type="button" class="btn btn-danger" onclick="clearCart()" id="clearCart">Clear cart</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--modal window end-->
+
 <script src="/js/jquery-1.11.0.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.easydropdown.js"></script>
 <script src="/megamenu/js/megamenu.js"></script>
 

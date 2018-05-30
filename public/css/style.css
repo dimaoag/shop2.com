@@ -3107,3 +3107,7 @@ ul.tag-men {
 {
 	outline: none;
 }
+
+#cart table img{
+	height: 50px;
+}

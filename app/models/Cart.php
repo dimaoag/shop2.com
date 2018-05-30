@@ -9,7 +9,7 @@ use shop2\App;
     [1] => Array
         (
             [qty] => QTY
-            [name] => NAME
+            [title] => NAME
             [price] => PRICE
             [img] => IMG
         )

@@ -23,7 +23,13 @@ $('body').on('click', '.add-to-cart', function (e) {
 });
 
 function showCart(cart){
-    console.log(cart);
+    if ($.trim(cart) == '<h3>Cart is empty!</h3>'){
+        $('#checkout, #clearCart').hide();
+    } else {
+        $('#checkout, #clearCart').show();
+    }
+    $('#cart .modal-body').html(cart);
+    $('#cart').modal();
 }
 
 

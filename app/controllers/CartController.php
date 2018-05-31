@@ -36,7 +36,7 @@ class CartController extends AppController {
     }
 
 
-
+    // delete items from cart
     public function deleteAction(){
         $id = !empty($_GET['id']) ? (int)$_GET['id'] : null;
         if (isset($_SESSION['cart'][$id])){
@@ -47,6 +47,16 @@ class CartController extends AppController {
             $this->loadView('cart_modal');
         }
         redirect();
+
+    }
+
+    // clear cart
+    public function clearAction(){
+        unset($_SESSION['cart']);
+        unset($_SESSION['cart_qty']);
+        unset($_SESSION['cart_sum']);
+        unset($_SESSION['cart_currency']);
+        $this->loadView('cart_modal');
 
     }
 

@@ -3,7 +3,7 @@ namespace app\models;
 
 use shop2\App;
 
-
+// It's viewing cart
 /*Array
 (
     [1] => Array
@@ -27,6 +27,12 @@ use shop2\App;
 
 class Cart extends AppModel {
 
+
+    /**
+     * @param $product
+     * @param int $qty
+     * @param null $mod
+     */
     public function addToCart($product, $qty = 1, $mod = null){
         if (!isset($_SESSION['cart_currency'])){
             $_SESSION['cart_currency'] = App::$app->getProperty('currency');
@@ -64,6 +70,43 @@ class Cart extends AppModel {
         $_SESSION['cart_sum'] -= $sumMinus;
         unset($_SESSION['cart'][$id]);
     }
+
+
+
+
+    public static function converting($newCurrency){
+        if (isset($_SESSION['cart_currency'])){
+            // converting cart_sum
+            if ($_SESSION['cart_currency']['base']){
+                $_SESSION['cart_sum'] *=  $newCurrency->value;
+            } else {
+                $_SESSION['cart_sum'] = ($_SESSION['cart_sum'] / $_SESSION['cart_currency']['value']) * $newCurrency->value;
+            }
+
+            // converting price products
+            foreach ($_SESSION['cart'] as $id => $item){
+                if ($_SESSION['cart_currency']['base']){
+                    $_SESSION['cart'][$id]['price'] *= $newCurrency->value;
+                } else {
+                    $_SESSION['cart'][$id]['price'] = ($_SESSION['cart'][$id]['price'] / $_SESSION['cart_currency']['value']) * $newCurrency->value;
+                }
+            }
+
+            // set in session new currency
+            foreach ($newCurrency as $key => $value){
+                $_SESSION['cart_currency'][$key] = $value;
+            }
+        }
+
+
+
+
+
+
+
+
+    }
+
 
 
 

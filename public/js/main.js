@@ -111,3 +111,30 @@ $('.available select').on('change', function () {
 
     }
 });
+
+// search
+var products = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+        wildcard: '%QUERY',
+        url: path + '/search/typeahead?query=%QUERY'
+    }
+});
+
+products.initialize();
+$('#typeahead').typeahead({
+    highlight: true // подсветка вводимого
+},{
+    name: 'products',
+    display: 'title', // return id and title showing only title, id as key
+    limit: 9, // 1+ more than items from database;
+    source: products
+});
+
+// event after clicking founded product
+$('#typeahead').bind('typeahead:select', function (ev, suggestion) {
+    //console.log(suggestion);
+    window.location = path + '/search/?s=' + encodeURIComponent(suggestion.title);
+});
+

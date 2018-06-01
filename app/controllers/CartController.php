@@ -27,6 +27,7 @@ class CartController extends AppController {
             $this->loadView('cart_modal');
         }
         redirect();
+
     }
 
 

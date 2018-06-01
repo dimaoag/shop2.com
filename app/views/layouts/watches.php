@@ -84,8 +84,12 @@
             </div>
             <div class="col-md-3 header-right">
                 <div class="search-bar">
-                    <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                    <input type="submit" value="">
+                    <form action="/search" method="get" autocomplete="off">
+                        <input type="text" class="typeahead" id="typeahead" name="s" placeholder="Search...">
+                        <input type="submit" value="">
+                    </form>
+<!--                    <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">-->
+<!--                    <input type="submit" value="">-->
                 </div>
             </div>
             <div class="clearfix"> </div>
@@ -184,8 +188,13 @@
 </div><!-- /.modal -->
 <!--modal window end-->
 
+<script>
+    var path = '<?=PATH?>';
+</script>
+
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/typeahead.bundle.js"></script>
 <script src="/js/jquery.easydropdown.js"></script>
 <script src="/megamenu/js/megamenu.js"></script>
 

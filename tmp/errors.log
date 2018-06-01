@@ -2518,3 +2518,45 @@
 [2018-05-30 20:27:25] Text error: Action app\controllers\CartController::deleteAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
         
 ====================='=
+[2018-06-01 14:35:12] Text error: Controller app\controllers\SearchController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-01 14:35:25] Text error: Controller app\controllers\SearchController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-01 14:41:45] Text error: syntax error, unexpected '{', expecting '(' | File: /var/www/shop2/app/controllers/SearchController.php | Line: 7 
+        
+====================='=
+[2018-06-01 14:41:48] Text error: syntax error, unexpected '{', expecting '(' | File: /var/www/shop2/app/controllers/SearchController.php | Line: 7 
+        
+====================='=
+[2018-06-01 14:42:11] Text error: View /var/www/shop2/app/views/Search/typeahead.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-06-01 14:42:16] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-01 14:42:21] Text error: View /var/www/shop2/app/views/Search/typeahead.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-06-01 14:46:12] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-01 14:46:20] Text error: View /var/www/shop2/app/views/Search/typeahead.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-06-01 14:47:39] Text error: View /var/www/shop2/app/views/Search/typeahead.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-06-01 15:11:24] Text error: View /var/www/shop2/app/views/Search/typeahead.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-06-01 15:29:01] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-01 15:40:33] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-01 15:40:42] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=

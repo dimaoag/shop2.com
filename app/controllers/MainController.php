@@ -14,7 +14,7 @@ class MainController extends AppController
         $hits = \R::find('product', "hit = '1' AND status = '1' LIMIT 8");
         $this->setMeta('Home', 'Description', 'Keywords');
         $this->setData(compact('brands', 'hits'));
-
+        
     }
 
 }

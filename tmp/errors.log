@@ -2560,3 +2560,6 @@
 [2018-06-01 15:40:42] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
         
 ====================='=
+[2018-06-04 12:05:08] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=

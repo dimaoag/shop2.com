@@ -11,11 +11,18 @@ class SearchController extends AppController {
                 $products = \R::getAll('SELECT id, title FROM product WHERE title LIKE ? LIMIT 10', ["%{$query}%"]);
             }
             echo json_encode($products);
-
         }
         die();
     }
 
+    public function indexAction(){
+        $query = !empty(trim($_GET['s'])) ? trim($_GET['s']) : null;
+        if ($query){
+            $products = \R::find('product', 'title LIKE ?', ["%{$query}%"]);
+        }
+        $this->setMeta('Search by: ' . htmlSpecialCharsWrapper($query));
+        $this->setData(compact('products', 'query'));
+    }
 
 
 

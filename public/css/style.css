@@ -1430,7 +1430,7 @@ a.mask {
 .account-bottom {
     margin-top: 2.2em;
 }
-.account-left input[type="text"],.account-left input[type="password"] {
+.account-left input[type="text"],.account-left input[type="password"],.account-left input[type="email"] {
     width: 90%;
     margin: 0px;
     color: #000;
@@ -3215,3 +3215,35 @@ span.twitter-typeahead {
 	top: 46px !important;
 }
 /*search*/
+
+
+.auth{
+	color: white;
+	cursor: pointer;
+	position: relative;
+	padding-right: 20px;
+
+
+}
+.auth:hover{
+	color: white;
+}
+
+.dropdown .carat, .dropdown .carat:after {
+	position: absolute;
+	right: 40%;
+	top: 40%;
+}
+
+.open div{
+	top: 31px;
+	left: 0px;
+}
+
+.box{
+	margin-top: 3px;
+}
+
+.total{
+	margin-top: 12px;
+}

@@ -24,13 +24,17 @@
                             <?php new \app\widgets\currency\Currency(); ?>
                         </select>
                     </div>
-                    <div class="box1">
-                        <select tabindex="4" class="dropdown">
-                            <option value="" class="label">English :</option>
-                            <option value="1">English</option>
-                            <option value="2">French</option>
-                            <option value="3">German</option>
-                        </select>
+                    <div class="btn-group">
+                        <?php if (!empty($_SESSION['user'])): ?>
+                            <a class="dropdown-toggle auth" data-toggle="dropdown"><?= htmlSpecialCharsWrapper($_SESSION['user']['name']); ?><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/user/cabinet" class="auth">Cabinet</a></li>
+                                <li><a href="/user/logout" class="auth">Log out</a></li>
+                            </ul>
+                        <?php else: ?>
+                            <a href="/user/login" class="auth">Log in</a>
+                            <a href="/user/signup" class="auth">Sign up</a>
+                        <?php endif; ?>
                     </div>
                     <div class="clearfix"></div>
                 </div>

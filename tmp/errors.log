@@ -2575,3 +2575,6 @@
 [2018-06-05 14:08:03] Text error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shop2.products' doesn't exist | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
         
 ====================='=
+[2018-06-05 19:22:59] Text error: Controller app\controllers\UserController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=

@@ -7,6 +7,10 @@ use shop2\App;
 class Category extends AppModel {
 
 
+    /**
+     * @param $id
+     * @return null|string
+     */
     public function getCategoryChildren($id){
         $categories = App::$app->getProperty('categories');
         $ids = null;

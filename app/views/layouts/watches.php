@@ -88,8 +88,6 @@
                         <input type="text" class="typeahead" id="typeahead" name="s" placeholder="Search...">
                         <input type="submit" value="">
                     </form>
-<!--                    <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">-->
-<!--                    <input type="submit" value="">-->
                 </div>
             </div>
             <div class="clearfix"> </div>

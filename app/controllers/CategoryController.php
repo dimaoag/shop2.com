@@ -4,6 +4,8 @@ namespace app\controllers;
 
 use app\models\Breadcrumbs;
 use app\models\Category;
+use shop2\App;
+use shop2\libs\Pagination;
 
 class CategoryController extends AppController {
 
@@ -14,7 +16,6 @@ class CategoryController extends AppController {
             throw new \Exception('Page not found', 404);
         }
 
-        // breadcrumbs
         $breadcrumbs = Breadcrumbs::getBreadcrumbs($category->id);
 
 
@@ -22,9 +23,19 @@ class CategoryController extends AppController {
         $catogoryChildren = $categoryModel->getCategoryChildren($category->id);
         $catogoryChildren = !$catogoryChildren ? $category->id : $catogoryChildren . $category->id;
 
-        $products = \R::find('product', "category_id IN ($catogoryChildren)");
+
+        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $perpage = App::$app->getProperty('pagination');
+        $total = \R::count('product', "category_id IN ($catogoryChildren)");
+        $paginationObj = new Pagination($page, $perpage, $total);
+        $pagination  = $paginationObj->getHtml();
+        $start = $paginationObj->getStart();
+        $isPagination = ($perpage <= $total) ? true : false;
+
+        $products = \R::find('product', "category_id IN ($catogoryChildren) LIMIT $start, $perpage");
+
 
         $this->setMeta($category->title, $category->description, $category->keywords);
-        $this->setData(compact('products', 'breadcrumbs'));
+        $this->setData(compact('products', 'breadcrumbs', 'pagination', 'isPagination'));
     }
 }

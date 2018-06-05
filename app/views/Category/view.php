@@ -57,6 +57,11 @@
                             </div>
                         <?php endforeach; ?>
                         <div class="clearfix"></div>
+                        <?php if ($isPagination): ?>
+                            <div class="text-center">
+                                <?=$pagination;?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 <?php else: ?>
                     <h3>In this category products not found!</h3>

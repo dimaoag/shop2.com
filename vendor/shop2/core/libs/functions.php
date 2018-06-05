@@ -25,7 +25,10 @@ function redirect($http = false){
 }
 
 
-
+/**
+ * @param $str
+ * @return string
+ */
 function htmlSpecialCharsWrapper($str){
     return htmlspecialchars($str, ENT_QUOTES); //преобразования html тегов (экранирования)
 }

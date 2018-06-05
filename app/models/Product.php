@@ -36,7 +36,6 @@ class Product extends AppModel {
                 $recentlyViewed[] = $id;
                 $recentlyViewed = implode('.', $recentlyViewed);
                 setcookie('recentlyViewed', $recentlyViewed , time()+3600*24, '/');
-                debug($recentlyViewed);
             }
         }
     }

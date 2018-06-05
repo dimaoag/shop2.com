@@ -2563,3 +2563,15 @@
 [2018-06-04 12:05:08] Text error: Action app\controllers\SearchController::indexAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
         
 ====================='=
+[2018-06-05 13:14:51] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-06-05 13:15:49] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-06-05 13:33:36] Text error: Page not found | File: /var/www/shop2/app/controllers/CategoryController.php | Line: 11 
+        
+====================='=
+[2018-06-05 14:08:03] Text error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shop2.products' doesn't exist | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

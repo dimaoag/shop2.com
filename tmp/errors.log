@@ -2578,3 +2578,27 @@
 [2018-06-05 19:22:59] Text error: Controller app\controllers\UserController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
         
 ====================='=
+[2018-06-06 08:52:32] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-06 08:53:31] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-06 08:53:33] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-06 08:53:34] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-06 08:58:05] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-06 08:58:09] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-06 09:00:41] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-06 09:00:42] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=

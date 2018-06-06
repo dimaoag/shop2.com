@@ -14,6 +14,7 @@ class UserController extends AppController {
             $user->load($data);
             if (!$user->validate($data) || !$user->isUnique()){
                 $user->getErrors();
+                $_SESSION['form_data'] = $data;
             } else {
                 $user->hashPassword();
                 if ($user->save('user')){

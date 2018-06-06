@@ -7,6 +7,8 @@ use app\models\User;
 class UserController extends AppController {
 
 
+
+
     public function signupAction(){
         if (!empty($_POST)){
             $user = new User();
@@ -18,7 +20,9 @@ class UserController extends AppController {
             } else {
                 $user->hashPassword();
                 if ($user->save('user')){
-                    $_SESSION['success'] = 'Success! You are registered.';
+                    if ($user->login()) {
+                        $_SESSION['success'] = 'Success!';
+                    }
                 } else {
                     $_SESSION['errors'] = 'Error. Try again.';
                 }
@@ -29,13 +33,32 @@ class UserController extends AppController {
         $this->setMeta('Registration');
     }
 
-    public function loginAction(){
 
+
+
+
+    public function loginAction(){
+        if (!empty($_POST)){
+            $user = new User();
+            if ($user->login()){
+                $_SESSION['success'] = 'Success!';
+            } else {
+                $_SESSION['errors'] = 'Error! Login or password incorrect.';
+            }
+            redirect();
+        }
+
+        $this->setMeta('Log In');
     }
+
+
 
     public function logoutAction(){
-
+        if (isset($_SESSION['user'])) unset($_SESSION['user']);
+        redirect();
     }
+
+
 
     public function cabinetAction(){
 

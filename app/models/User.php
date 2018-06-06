@@ -4,6 +4,7 @@ namespace app\models;
 
 class User extends AppModel {
 
+
     public $attributes = [
         'login' => '',
         'password' => '',
@@ -86,6 +87,24 @@ class User extends AppModel {
         return false;
     }
 
+
+    /**
+     * @return bool
+     */
+    public static function isAuth(){
+        return isset($_SESSION['user']) ? true : false;
+    }
+
+
+    /**
+     * @return bool
+     */
+    public static function isAdmin(){
+        if (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin'){
+            return true;
+        }
+        return false;
+    }
 
 
 

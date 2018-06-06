@@ -19,12 +19,11 @@ class UserController extends AppController {
                 $_SESSION['form_data'] = $data;
             } else {
                 $user->hashPassword();
-                if ($user->save('user')){
-                    if ($user->login()) {
-                        $_SESSION['success'] = 'Success!';
-                    }
+                $user->save('user');
+                if ($user->login()) {
+                    $_SESSION['success'] = 'Success!';
                 } else {
-                    $_SESSION['errors'] = 'Error. Try again.';
+                $_SESSION['errors'][] = 'Error. Try again.';
                 }
             }
             redirect();
@@ -43,7 +42,7 @@ class UserController extends AppController {
             if ($user->login()){
                 $_SESSION['success'] = 'Success!';
             } else {
-                $_SESSION['errors'] = 'Error! Login or password incorrect.';
+                $_SESSION['errors'][] = 'Error! Login or password incorrect.';
             }
             redirect();
         }

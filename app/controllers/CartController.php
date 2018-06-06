@@ -2,6 +2,8 @@
 namespace app\controllers;
 
 use app\models\Cart;
+use app\models\Order;
+use app\models\User;
 
 class CartController extends AppController {
 
@@ -48,7 +50,6 @@ class CartController extends AppController {
             $this->loadView('cart_modal');
         }
         redirect();
-
     }
 
     // clear cart
@@ -58,9 +59,48 @@ class CartController extends AppController {
         unset($_SESSION['cart_sum']);
         unset($_SESSION['cart_currency']);
         $this->loadView('cart_modal');
-
     }
 
+
+    // view orders
+    public function viewAction(){
+        $this->setMeta("Cart");
+    }
+
+
+    public function checkoutAction(){
+        if (!empty($_POST)){
+            if (!User::isAuth()){
+                // registration
+                $user = new User();
+                $data = $_POST;
+                $user->load($data);
+                if (!$user->validate($data) || !$user->isUnique()){
+                    $user->getErrors();
+                    $_SESSION['form_data'] = $data;
+                    redirect();
+                } else {
+                    $user->hashPassword();
+                    $user_id = $user->save('user');
+                    if ($user->login()) {
+                        $_SESSION['success'] = 'Success! You are registered.';
+                    } else {
+                        $_SESSION['errors'][] = 'Error. Try again.';
+                        redirect();
+                    }
+                }
+            }
+            // saving order
+            $data['user_id'] = isset($user_id) ? $user_id : $_SESSION['user']['id'];
+            $data['note'] = !empty($_POST['note']) ? $_POST['note'] : '';
+            $user_email = isset($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];
+
+            $order_id = Order::saveOrder($data);
+            Order::mailOrder($order_id, $user_email);
+        }
+        redirect();
+
+    }
 
 
 

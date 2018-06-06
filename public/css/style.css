@@ -3108,7 +3108,7 @@ ul.tag-men {
 	outline: none;
 }
 
-#cart table img{
+#cart table img, .cart table img{
 	height: 50px;
 }
 .del-item{

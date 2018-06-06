@@ -181,8 +181,8 @@
                 <p>One fine body&hellip;</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Continue buying</button>
-                <a href="/cart/view" type="button" class="btn btn-primary" id="checkout">Checkout</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Continue</button>
+                <a href="/cart/view" type="button" class="btn btn-primary" id="checkout">Buy</a>
                 <button type="button" class="btn btn-danger" onclick="clearCart()" id="clearCart">Clear cart</button>
             </div>
         </div><!-- /.modal-content -->

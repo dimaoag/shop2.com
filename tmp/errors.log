@@ -2602,3 +2602,12 @@
 [2018-06-06 09:00:42] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
         
 ====================='=
+[2018-06-06 18:13:23] Text error: Action app\controllers\CartController::viewAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-06 19:02:23] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user3' for key 'login' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-06-06 19:03:56] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user3' for key 'login' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

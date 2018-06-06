@@ -34,6 +34,29 @@ class User extends AppModel {
 
 
 
+    public function hashPassword(){
+        $this->attributes['password'] = password_hash($this->attributes['password'], PASSWORD_DEFAULT);
+    }
+
+
+    /**
+     * @return bool
+     */
+    public function isUnique(){
+        $user =  \R::findOne('user', 'login = ? OR email = ?', [$this->attributes['login'], $this->attributes['email']]);
+        if ($user){
+            if ($user->login == $this->attributes['login']){
+                $this->errors['unique'][] = 'This login is already reserved';
+            }
+            if ($user->email == $this->attributes['email']){
+                $this->errors['unique'][] = 'This email is already reserved';
+            }
+            return false;
+        }
+        return true;
+    }
+
+
 
 
 

@@ -63,5 +63,18 @@ abstract class Model
     }
 
 
+    /**
+     * @param $table
+     * @return int|string
+     */
+    public function save($table){
+        $tbl = \R::dispense($table);
+        foreach ($this->attributes as $attribute => $value){
+            $tbl->$attribute = $value;
+        }
+        return \R::store($tbl);
+    }
+
+
 
 }

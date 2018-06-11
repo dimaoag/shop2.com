@@ -2611,3 +2611,71 @@
 [2018-06-06 19:03:56] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'user3' for key 'login' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
         
 ====================='=
+[2018-06-09 18:18:06] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-09 20:40:52] Text error: Don't connection to db | File: /var/www/shop2/vendor/shop2/core/Db.php | Line: 15 
+        
+====================='=
+[2018-06-11 16:25:02] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MQ-24-7BUL (Silver), 80),(3, 3, 1, Casio GA-1000-1AER, 400),(3, 5, 2, Citizen BJ' at line 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-06-11 16:40:58] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:00] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:02] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:06] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:06] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:22] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:23] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:43] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:45] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:46] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:47] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:48] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:48] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:48] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:49] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:41:49] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:42:44] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 16:42:45] Text error: Class 'app\widgets\currency\Currency' not found | File: /var/www/shop2/app/controllers/AppController.php | Line: 17 
+        
+====================='=
+[2018-06-11 18:04:14] Text error: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b1-v6sm8661767ljk.56 - gsmtp
+" | File: /var/www/shop2/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php | Line: 419 
+        
+====================='=

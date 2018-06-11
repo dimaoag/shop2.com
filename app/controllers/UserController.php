@@ -38,6 +38,13 @@ class UserController extends AppController {
 
     public function loginAction(){
         if (!empty($_POST)){
+            if (isset($_SESSION['cart'])){
+                unset($_SESSION['cart']);
+                unset($_SESSION['cart_qty']);
+                unset($_SESSION['cart_sum']);
+                unset($_SESSION['cart_currency']);
+            }
+
             $user = new User();
             if ($user->login()){
                 $_SESSION['success'] = 'Success!';
@@ -54,6 +61,12 @@ class UserController extends AppController {
 
     public function logoutAction(){
         if (isset($_SESSION['user'])) unset($_SESSION['user']);
+        if (isset($_SESSION['cart'])){
+            unset($_SESSION['cart']);
+            unset($_SESSION['cart_qty']);
+            unset($_SESSION['cart_sum']);
+            unset($_SESSION['cart_currency']);
+        }
         redirect();
     }
 

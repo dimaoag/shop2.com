@@ -27,7 +27,7 @@ class View
         $this->controller = $route['controller'];
         $this->model = $route['controller'];
         $this->view = $view;
-        $this->prefix = $route['prefix'];
+        $this->prefix = rtrim($route['prefix'], '\\') . '/';
         $this->meta = $meta;
 
         if ($layout === false){

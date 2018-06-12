@@ -66,6 +66,8 @@
 <!--start-logo-->
 <div class="logo">
     <a href="/"><h1>Luxury Watches</h1></a>
+    <br>
+    <a href="/admin/"><h1>Admin</h1></a>
 </div>
 <!--start-logo-->
 <!--bottom-header-->

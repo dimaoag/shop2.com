@@ -138,3 +138,43 @@ $('#typeahead').bind('typeahead:select', function (ev, suggestion) {
     window.location = path + '/search/?s=' + encodeURIComponent(suggestion.title);
 });
 
+
+// filters
+$('body').on('change', '.w_sidebar input', function () {
+   var checked = $('.w_sidebar input:checked'),
+       data = '';
+   checked.each(function () {
+       data += this.value + ',';
+   });
+   if (data){
+       $.ajax({
+           url: location.href,
+           data: {
+               filter: data
+           },
+           type: 'GET',
+           beforeSend: function(){
+               $('.preloader').show();
+               $('.product-one').hide();
+           },
+           success: function(res){
+               $('.preloader').delay(500).fadeOut('slow', function () {
+                   $('.product-one').html(res).fadeIn(); //show products
+                   var url = location.search.replace(/filter(.+?)(&|$)/g, ''); //delete in url: /filter=1,2,5;
+                   var newUrl = location.pathname + url + (location.search ? "&" : "?") + "filter=" + data;
+                   newUrl = newUrl.replace('&&', '&');
+                   newUrl = newUrl.replace('?&', '?');
+                   history.pushState({}, '', newUrl);
+               });
+           },
+           error: function () {
+               alert("Error!!! Try again later.");
+           }
+       });
+   } else {
+       window.location = location.pathname;
+   }
+
+
+   // console.log(data);
+});

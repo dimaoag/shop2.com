@@ -68,4 +68,15 @@ class Filter {
         return $attributes;
     }
 
+
+    public static function getFilter(){
+        $filter = null;
+        if (!empty($_GET['filter'])){
+            $filter = preg_replace("#[^\d,]+#", '', $_GET['filter']); //replace all without numbers and coma.
+            $filter = trim($filter, ',');
+        }
+        return $filter;
+    }
+
+
 }

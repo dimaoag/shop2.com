@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <?= $this->getMeta(); ?>
+    <link rel="shortcut icon" href="/images/star.png" type="image/png" />
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/megamenu/css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -123,7 +124,7 @@
                     <li><a href="#"><p>Specials</p></a></li>
                     <li><a href="#"><p>New Products</p></a></li>
                     <li><a href="#"><p>Our Stores</p></a></li>
-                    <li><a href="contact.html"><p>Contact Us</p></a></li>
+                    <li><a href="#"><p>Contact Us</p></a></li>
                     <li><a href="#"><p>Top Sellers</p></a></li>
                 </ul>
             </div>
@@ -273,11 +274,11 @@
 <script src="/js/main.js"></script>
 
 <?php
-$logs = \R::getDatabaseAdapter()
-    ->getDatabase()
-    ->getLogger();
-
-debug( $logs->grep( 'SELECT' ) );
-?>
+//$logs = \R::getDatabaseAdapter()
+//    ->getDatabase()
+//    ->getLogger();
+//
+//debug( $logs->grep( 'SELECT' ) );
+//?>
 </body>
 </html>

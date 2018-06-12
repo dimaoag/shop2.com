@@ -29,7 +29,7 @@ class Filter {
 
         $this->attributes = $cache->get('filter_attributes');
         if (!$this->attributes){
-            $this->attributes = $this->getAttributes();
+            $this->attributes = self::getAttributes();
             $cache->set('filter_attributes', $this->attributes, 5);
         }
         $filters = $this->getHtml();
@@ -63,7 +63,7 @@ class Filter {
     /**
      * @return array
      */
-    protected function getAttributes(){
+    public static function getAttributes(){
         $data = \R::getAssoc('SELECT * FROM attribute_value');
         $attributes = [];
         foreach ($data as $key => $value){
@@ -73,6 +73,9 @@ class Filter {
     }
 
 
+    /**
+     * @return null|string|string[]
+     */
     public static function getFilter(){
         $filter = null;
         if (!empty($_GET['filter'])){
@@ -81,6 +84,31 @@ class Filter {
         }
         return $filter;
     }
+
+
+    /**
+     * @param $filter
+     * @return int
+     */
+    public static function getCountGroups($filter){
+        $filters = explode(',', $filter);
+        $cache = Cache::instance();
+        $attributes = $cache->get('filter_attributes');
+        if (!$attributes){
+            $attributes = self::getAttributes();
+        }
+        $data = [];
+        foreach ($attributes as $key => $item){
+            foreach ($item as $k => $v){
+                if (in_array($k, $filters)){
+                    $data[] = $key;
+                    break;
+                }
+            }
+        }
+        return count($data);
+    }
+
 
 
 }

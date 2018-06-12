@@ -2679,3 +2679,21 @@
 " | File: /var/www/shop2/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php | Line: 419 
         
 ====================='=
+[2018-06-12 16:35:52] Text error: Class 'app\controllers\App' not found | File: /var/www/shop2/app/controllers/SearchController.php | Line: 26 
+        
+====================='=
+[2018-06-12 16:36:17] Text error: Class 'app\controllers\App' not found | File: /var/www/shop2/app/controllers/SearchController.php | Line: 26 
+        
+====================='=
+[2018-06-12 16:36:29] Text error: Class 'app\controllers\App' not found | File: /var/www/shop2/app/controllers/SearchController.php | Line: 26 
+        
+====================='=
+[2018-06-12 16:36:48] Text error: Class 'App' not found | File: /var/www/shop2/app/controllers/SearchController.php | Line: 26 
+        
+====================='=
+[2018-06-12 16:36:49] Text error: Class 'App' not found | File: /var/www/shop2/app/controllers/SearchController.php | Line: 26 
+        
+====================='=
+[2018-06-12 16:37:00] Text error: Class 'app\controllers\App' not found | File: /var/www/shop2/app/controllers/SearchController.php | Line: 26 
+        
+====================='=

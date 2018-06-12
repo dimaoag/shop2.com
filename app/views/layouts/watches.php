@@ -190,6 +190,7 @@
 </div><!-- /.modal -->
 <!--modal window end-->
 
+<div class="preloader"><img src="/images/ring.svg" alt=""></div>
 <script>
     var path = '<?=PATH?>';
 </script>

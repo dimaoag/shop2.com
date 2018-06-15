@@ -2,6 +2,8 @@
 namespace app\controllers\admin;
 
 
+use app\models\Category;
+
 class CategoryController extends AdminController {
 
     public function indexAction(){
@@ -33,7 +35,23 @@ class CategoryController extends AdminController {
         \R::trash($category);
         $_SESSION['success'] = 'Category is deleted';
         redirect();
+    }
 
+    public function addAction(){
+        if (!empty($_POST)){
+            $category = new Category();
+            $data = $_POST;
+            $category->load($data);
+            if (!$category->validate($data)){
+                $category->getErrors();
+                redirect();
+            }
+            if ($id = $category->save('category')){
+
+            }
+        }
+
+        $this->setMeta('New category');
     }
 
 

@@ -2895,3 +2895,21 @@
 [2018-06-14 19:20:54] Text error: Controller app\controllers\admin\CacheController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
         
 ====================='=
+[2018-06-15 06:43:56] Text error: Controller app\controllers\admin\CacheController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-15 06:49:07] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-06-15 06:49:23] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=
+[2018-06-15 07:15:17] Text error: Controller app\controllers\admin\OrderController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-15 07:32:28] Text error: Controller app\controllers\admin\CategoriesController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-15 08:59:30] Text error: syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) | File: /var/www/shop2/app/views/admin/Order/index.php | Line: 61 
+        
+====================='=

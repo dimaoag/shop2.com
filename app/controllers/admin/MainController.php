@@ -8,9 +8,11 @@ class MainController extends AdminController {
 
 
         $countOfUsers = \R::count('user');
-
+        $countCategories = \R::count('category');
+        $countProducts = \R::count('product');
+        $countNewOrders = \R::count('order', "status = '0'");
 
         $this->setMeta('Dashboard');
-        $this->setData(compact('countOfUsers'));
+        $this->setData(compact('countOfUsers', 'countNewOrders', 'countCategories', 'countProducts'));
     }
 }

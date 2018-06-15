@@ -281,27 +281,13 @@
                                 </p>
                             </li>
                             <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-                            </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="/user/logout" class="btn btn-default btn-flat">Log out</a>
                                 </div>
                             </li>
                         </ul>
@@ -342,14 +328,14 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active">
+                <li class="active" data-widget="tree">
                     <a href="<?=ADMIN?>">
                         <i class="fa fa-dashboard"></i><span>Home</span>
                     </a>
                 </li>
-                <li>
+                <li data-widget="tree">
                     <a href="<?=ADMIN?>/order">
-                        <i class="fa fa-shopping-cart"></i>Orders</span>
+                        <i class="fa fa-shopping-cart"></i><span>Orders</span>
                     </a>
                 </li>
                 <li class="treeview">
@@ -360,7 +346,7 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </span>
                     </a>
-                    <ul class="treeview-menu">
+                    <ul class="treeview-menu" data-widget="tree">
                         <li><a href="<?=ADMIN?>/category">List of categories</a></li>
                         <li><a href="<?=ADMIN?>/category/add">Add category</a></li>
                     </ul>
@@ -380,7 +366,7 @@
                 </li>
                 <li>
                     <a href="<?=ADMIN?>/cache">
-                        <i class="fa fa-folder"></i>Cache</span>
+                        <i class="fa fa-folder"></i><span>Cache</span>
                     </a>
                 </li>
                 <li class="treeview">
@@ -396,10 +382,6 @@
                         <li><a href="<?=ADMIN?>/user/add">Add user</a></li>
                     </ul>
                 </li>
-<!--                <li class="header">LABELS</li>-->
-<!--                <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>-->
-<!--                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>-->
-<!--                <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>-->
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -657,3 +639,11 @@
 <script src="dist/js/demo.js"></script>
 </body>
 </html>
+
+<?php
+$logs = \R::getDatabaseAdapter()
+    ->getDatabase()
+    ->getLogger();
+
+debug( $logs->grep( 'SELECT' ) );
+//?>

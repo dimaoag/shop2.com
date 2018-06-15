@@ -68,7 +68,7 @@
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="<?=ADMIN?>/categories" class="small-box-footer">All categories<i class="fa fa-arrow-circle-right"></i></a>
+                <a href="<?=ADMIN?>/category" class="small-box-footer">All categories<i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->

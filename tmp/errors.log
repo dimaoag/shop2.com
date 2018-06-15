@@ -2928,3 +2928,15 @@
 [2018-06-15 12:47:40] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updatea_at' in 'field list' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
         
 ====================='=
+[2018-06-15 13:27:09] Text error: Controller app\controllers\admin\CategoriesController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-15 14:16:16] Text error: View /var/www/shop2/app/views/admin/Category/delete.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-06-15 14:46:26] Text error: Action app\controllers\admin\CategoryController::editAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-15 14:46:34] Text error: Action app\controllers\admin\CategoryController::editAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=

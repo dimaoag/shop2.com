@@ -331,7 +331,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active" data-widget="tree">
+                <li data-widget="tree">
                     <a href="<?=ADMIN?>">
                         <i class="fa fa-dashboard"></i><span>Home</span>
                     </a>

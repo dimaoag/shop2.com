@@ -2940,3 +2940,12 @@
 [2018-06-15 14:46:34] Text error: Action app\controllers\admin\CategoryController::editAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
         
 ====================='=
+[2018-06-15 14:58:28] Text error: Controller app\controllers\admin\CacheController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-15 19:24:22] Text error: Controller app\controllers\admin\ProductController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-15 19:24:29] Text error: Action app\controllers\admin\CategoryController::addAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=

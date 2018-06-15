@@ -2913,3 +2913,18 @@
 [2018-06-15 08:59:30] Text error: syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) | File: /var/www/shop2/app/views/admin/Order/index.php | Line: 61 
         
 ====================='=
+[2018-06-15 09:08:38] Text error: Action app\controllers\admin\OrderController::viewAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-15 09:58:51] Text error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shop2.order_products' doesn't exist | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-06-15 10:18:51] Text error: syntax error, unexpected end of file | File: /var/www/shop2/app/views/admin/Order/view.php | Line: 89 
+        
+====================='=
+[2018-06-15 11:53:15] Text error: Controller app\controllers\admin\CacheController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-06-15 12:47:40] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'updatea_at' in 'field list' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

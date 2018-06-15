@@ -18,5 +18,19 @@ class AdminController extends Controller {
         }
     }
 
+    public function getRequestId($get = true, $id = 'id'){
+        if ($get){
+            $data = $_GET;
+        } else {
+            $data = $_POST;
+        }
+        $id = !empty($data[$id]) ? (int)$data[$id] : null;
+        if (!$id){
+            throw new \Exception('Page not found', 404);
+        }
+        return $id;
+    }
+
+
 
 }

@@ -19,6 +19,8 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+    <link rel="stylesheet" href="admin.css">
     <!-- Morris chart -->
 <!--    <link rel="stylesheet" href="bower_components/morris.js/morris.css">-->
     <!-- jvectormap -->
@@ -45,7 +47,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="<?=ADMIN?>" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
@@ -274,17 +276,17 @@
                             <!-- User image -->
                             <li class="user-header">
                                 <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
                                 <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
+                                    <?php if (!empty($_SESSION['user'])): ?>
+                                        <?=$_SESSION['user']['name']?>
+                                    <?php endif; ?>
                                 </p>
                             </li>
                             <!-- Menu Body -->
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="<?=ADMIN?>/user/edit?id=<?=$_SESSION['user']['id']?>" class="btn btn-default btn-flat">Edit Profile</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="/user/logout" class="btn btn-default btn-flat">Log out</a>
@@ -310,8 +312,9 @@
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Alexander Pierce</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <?php if (!empty($_SESSION['user'])): ?>
+                        <p><?=$_SESSION['user']['name']?></p>
+                    <?php endif; ?>
                 </div>
             </div>
             <!-- search form -->
@@ -389,6 +392,18 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        <?php if (isset($_SESSION['errors'])): ?>
+            <div class="alert alert-danger">
+                <?php echo $_SESSION['errors']; unset($_SESSION['errors']); ?>
+            </div>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['success'])): ?>
+            <div class="alert alert-success">
+                <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+            </div>
+        <?php endif; ?>
+
+
         <?=$content?>
     </div>
     <!-- /.content-wrapper -->
@@ -637,6 +652,8 @@
 <!--<script src="dist/js/pages/dashboard.js"></script>-->
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<script src="admin.js"></script>
 </body>
 </html>
 

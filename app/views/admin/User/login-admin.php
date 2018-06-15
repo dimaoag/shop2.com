@@ -1,14 +1,4 @@
 <div class="login-box">
-    <?php if (isset($_SESSION['errors'])): ?>
-        <div class="alert alert-danger">
-            <?php echo $_SESSION['errors']; unset($_SESSION['errors']); ?>
-        </div>
-    <?php endif; ?>
-    <?php if (isset($_SESSION['success'])): ?>
-        <div class="alert alert-success">
-            <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
-        </div>
-    <?php endif; ?>
     <div class="login-logo">
         <a href="index2.html"><b>Admin</b>LTE</a>
     </div>

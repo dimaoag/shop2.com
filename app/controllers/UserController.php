@@ -61,6 +61,10 @@ class UserController extends AppController {
 
     public function logoutAction(){
         if (isset($_SESSION['user'])) unset($_SESSION['user']);
+        if (isset($_SESSION['errors']) || $_SESSION['success']) {
+            unset($_SESSION['errors']);
+            unset($_SESSION['success']);
+        }
         if (isset($_SESSION['cart'])){
             unset($_SESSION['cart']);
             unset($_SESSION['cart_qty']);

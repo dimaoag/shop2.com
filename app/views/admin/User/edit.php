@@ -50,13 +50,12 @@
                                    value="<?=htmlSpecialCharsWrapper($user->address)?>">
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group has-feedback">
                             <label for="role">Role</label>
-                            <select name="role" id="role" class="form-control">
+                            <select name="role" id="role" class="form-control" required>
                                 <option value="user" <?php if ($user->role == 'user') echo ' selected';?>>User</option>
                                 <option value="admin" <?php if ($user->role == 'admin') echo ' selected';?>>Admin</option>
                             </select>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <input type="hidden" name="id" value="<?=$user->id?>">
                         <button type="submit" class="btn btn-success">Save</button>

@@ -20,11 +20,16 @@ class UserController extends AppController {
             } else {
                 $user->hashPassword();
                 $user->save('user');
-                if ($user->login()) {
-                    $_SESSION['success'] = 'Success!';
-                } else {
-                $_SESSION['errors'][] = 'Error. Try again.';
+                if (!isset($_POST['role'])){
+                    if ($user->login()) {
+                        redirect(PATH . '/');
+                        $_SESSION['success'] = 'Success!';
+                    } else {
+                        $_SESSION['errors'][] = 'Error. Try again.';
+                    }
                 }
+                $_SESSION['success'] = 'Success!';
+
             }
             redirect();
         }

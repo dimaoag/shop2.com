@@ -2,7 +2,7 @@
 namespace app\controllers\admin;
 
 
-use app\models\User;
+use app\models\admin\User;
 use shop2\libs\Pagination;
 
 class UserController extends AdminController {
@@ -27,6 +27,7 @@ class UserController extends AdminController {
 
     }
 
+    //delete users > delete orders(cascade) > delete order_products
 
     public function indexAction(){
         $page = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -44,15 +45,40 @@ class UserController extends AdminController {
 
 
     public function editAction(){
+
+        if (!empty($_POST)){
+            $id = $this->getRequestId(false);
+            $user = new User();
+            $data = $_POST;
+            $user->load($data);
+            if (!$user->attributes['password']){
+                unset($user->attributes['password']);
+            } else {
+                $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
+            }
+
+            if (!$user->validate($data) || !$user->isUnique()){
+                $user->getErrors();
+                redirect();
+            }
+            if ($user->update('user', $id)){
+                $_SESSION['success'] = 'Data is saved';
+            }
+            redirect();
+        }
+
         $user_id = $this->getRequestId();
         $user = \R::load('user', $user_id);
-
-
 
         $this->setMeta('Edit user profile');
         $this->setData(compact('user'));
     }
 
+
+    public function addAction(){
+
+        $this->setMeta('Add new user');
+    }
 
 
 
@@ -68,13 +94,6 @@ class UserController extends AdminController {
 
     }
 
-    public function viewAction(){
-
-        $users = \R::findAll( 'user' );
-
-        $this->setMeta('All users');
-        $this->setData(compact('users'));
-    }
 
 
 

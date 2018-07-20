@@ -3019,3 +3019,6 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-20 12:56:53] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`id' at line 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
         
 ====================='=
+[2018-07-20 13:49:18] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
+        
+====================='=

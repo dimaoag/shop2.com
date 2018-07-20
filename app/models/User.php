@@ -11,6 +11,7 @@ class User extends AppModel {
         'name' => '',
         'email' => '',
         'address' => '',
+        'role' => 'user',
     ];
 
 
@@ -20,7 +21,6 @@ class User extends AppModel {
             ['password'],
             ['name'],
             ['email'],
-            ['address']
         ],
         'email' => [
             ['email']

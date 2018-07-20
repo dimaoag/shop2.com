@@ -2949,3 +2949,18 @@
 [2018-06-15 19:24:29] Text error: Action app\controllers\admin\CategoryController::addAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
         
 ====================='=
+[2018-06-26 11:29:01] Text error: Action app\controllers\admin\CategoryController::editAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-06-26 11:53:25] Text error: Action app\controllers\admin\CategoryController::editAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-16 07:42:05] Text error: Page not found | File: /var/www/shop2/app/controllers/admin/AdminController.php | Line: 29 
+        
+====================='=
+[2018-07-16 07:42:33] Text error: Page not found | File: /var/www/shop2/app/controllers/admin/AdminController.php | Line: 29 
+        
+====================='=
+[2018-07-20 07:02:43] Text error: Page not found | File: /var/www/shop2/app/controllers/admin/AdminController.php | Line: 29 
+        
+====================='=

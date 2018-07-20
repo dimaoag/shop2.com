@@ -2,7 +2,9 @@
 namespace app\controllers\admin;
 
 
+use app\models\AppModel;
 use app\models\Category;
+use shop2\App;
 
 class CategoryController extends AdminController {
 
@@ -47,11 +49,48 @@ class CategoryController extends AdminController {
                 redirect();
             }
             if ($id = $category->save('category')){
-
+                $alias = AppModel::createAlias('category', 'alias', $data['title'], $id);
+                $cat = \R::load('category', $id);
+                $cat->alias = $alias;
+                \R::store($cat);
+                $_SESSION['success'] = 'Category added';
             }
+            redirect();
         }
 
         $this->setMeta('New category');
+    }
+
+    public function editAction(){
+        if (!empty($_POST)){
+            $id = $this->getRequestId(false);
+            $category = new Category();
+            $data = $_POST;
+            $category->load($data);
+            if (!$category->validate($data)){
+                $category->getErrors();
+                redirect();
+            }
+            if ($category->update('category', $id)){
+                $alias = AppModel::createAlias('category', 'alias', $data['title'], $id);
+                $category = \R::load('category', $id);
+                $category->alias = $alias;
+                \R::store($category);
+                $_SESSION['success'] = 'Changes saved';
+            }
+            redirect();
+        }
+
+        $id = $this->getRequestId();
+        $category = \R::load('category', $id);
+        App::$app->setProperty('parent_id', $category->parent_id);
+
+
+
+
+
+        $this->setData(compact('category'));
+        $this->setMeta("Edit category {$category->title}");
     }
 
 

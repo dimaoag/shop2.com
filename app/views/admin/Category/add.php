@@ -39,7 +39,7 @@
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div class="form-group">
-                            <label for="description">description</label>
+                            <label for="description">Description</label>
                             <input type="text" name="description" class="form-control" placeholder="description">
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>

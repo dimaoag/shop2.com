@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: ip
   
-  config.vm.network "forwarded_port", guest: 3306, host: 3306
+#  config.vm.network "forwarded_port", guest: 3306, host: 3306
 #  config.vm.network "forwarded_port", guest: 80, host: 8080
 
   config.vm.synced_folder www_src, www_dst, owner: "www-data", group: "www-data"

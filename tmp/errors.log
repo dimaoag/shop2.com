@@ -2964,3 +2964,12 @@
 [2018-07-20 07:02:43] Text error: Page not found | File: /var/www/shop2/app/controllers/admin/AdminController.php | Line: 29 
         
 ====================='=
+[2018-07-20 08:02:02] Text error: Controller app\controllers\admin\CacheController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-07-20 08:10:06] Text error: Controller app\controllers\admin\CacheController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-07-20 08:17:14] Text error: Controller app\controllers\admin\CacheController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=

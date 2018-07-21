@@ -95,6 +95,14 @@ class UserController extends AdminController {
     }
 
 
+    public function deleteAction(){
+        $user_id = $this->getRequestId();
+        $user = \R::load('user', $user_id);
+        \R::trash($user);
+        $_SESSION['success'] = 'User is deleted';
+        redirect();
+    }
+
 
 
 }

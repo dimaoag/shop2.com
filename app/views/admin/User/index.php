@@ -20,8 +20,8 @@
                                 <th>Name</th>
                                 <th>Login</th>
                                 <th>Email</th>
-                                <th>Role</th>
                                 <th>Orders</th>
+                                <th>Role</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -32,12 +32,12 @@
                                     <td><?=$user->name?></td>
                                     <td><?=$user->login?></td>
                                     <td><?=$user->email?></td>
-                                    <td><?=$user->role?></td>
                                     <td>
                                         <a href="<?=ADMIN?>/user/orders?id=<?=$user->id?>">
                                             Orders
                                         </a>
                                     </td>
+                                    <td><?=$user->role?></td>
                                     <td>
                                         <a href="<?=ADMIN?>/user/edit?id=<?=$user->id?>">
                                             <i class="fa fa-fw fa-edit"></i>

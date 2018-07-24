@@ -647,6 +647,7 @@
 <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Bootstrap CKeditor -->
 <script src="bower_components/ckeditor/ckeditor.js"></script>
+<script src="bower_components/ckeditor/adapters/jquery.js"></script>
 <!-- Slimscroll -->
 <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->

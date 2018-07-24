@@ -18,8 +18,6 @@ $('.sidebar-menu a').each(function () {
 
 
 // include CKeditor
-CKEDITOR.replace('editor1');
-
-// console.log(public_path);
-// console.log(adminPath);
+// CKEDITOR.replace('editor1');
+$('#editor1').ckeditor();
 

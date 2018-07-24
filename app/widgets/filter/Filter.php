@@ -8,12 +8,14 @@ class Filter {
 
     public $groups;
     public $attributes;
-    public $tpl;
+    public $tpl; // template
+    public $filter;
 
 
 
-    public function __construct() {
-        $this->tpl = __DIR__ . '/filter_tpl/filter_view.php';
+    public function __construct($filter = null, $tpl = null) {
+        $this->filter = $filter;
+        $this->tpl = $tpl ? $tpl : __DIR__ . '/filter_tpl/filter_view.php';
         $this->run();
     }
 

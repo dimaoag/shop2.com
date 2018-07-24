@@ -42,6 +42,9 @@ class ProductController extends AdminController {
                 $prod = \R::load('product', $id);
                 $prod->alias = $alias;
                 \R::store($prod);
+                $product->editFilter($id, $data);
+
+
 
                 $_SESSION['success'] =  'Product is created';
 

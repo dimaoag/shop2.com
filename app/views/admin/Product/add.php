@@ -99,6 +99,9 @@
                                         <input type="checkbox" name="hit"> New
                                     </label>
                                 </div>
+
+                                <?php new \app\widgets\filter\Filter(null, WWW . '/filter/admin_filter_tpl.php'); ?>
+
                                 <div class="box-footer">
                                     <button type="submit" class="btn btn-success">Save</button>
                                 </div>

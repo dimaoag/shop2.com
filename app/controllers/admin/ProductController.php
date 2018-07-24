@@ -4,6 +4,7 @@ namespace app\controllers\admin;
 
 use app\models\admin\Product;
 use shop2\libs\Pagination;
+use app\models\AppModel;
 
 class ProductController extends AdminController {
 
@@ -37,8 +38,15 @@ class ProductController extends AdminController {
                 redirect();
             }
             if ($id = $product->save('product')){
+                $alias = AppModel::createAlias('product', 'alias', $data['title'], $id);
+                $prod = \R::load('product', $id);
+                $prod->alias = $alias;
+                \R::store($prod);
+
                 $_SESSION['success'] =  'Product is created';
-                debug($id);
+
+
+
             }
             redirect();
         }

@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="content">Content</label>
-                                    <textarea class="form-control" rows="5" id="editor1" name="content"
+                                    <textarea class="form-control" rows="20" id="editor1" name="content"
                                               value="<?= isset($_SESSION['form_data']['content']) ? htmlSpecialCharsWrapper($_SESSION['form_data']['content']) : ''?>"></textarea>
                                 </div>
                                 <div class="form-group has-feedback">

@@ -9,7 +9,7 @@ class AppModel extends Model {
         $str = self::str2url($str);
         $res = \R::findOne($tableName,"$field = ?", [$str]);
         if ($res){
-            $str = "{$str}_{$id}";
+            $str = "{$str}-{$id}";
         }
         return $str;
     }

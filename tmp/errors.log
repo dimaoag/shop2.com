@@ -3139,3 +3139,6 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-24 09:52:09] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
         
 ====================='=
+[2018-07-24 10:16:39] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

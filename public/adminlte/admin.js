@@ -16,3 +16,7 @@ $('.sidebar-menu a').each(function () {
     }
 });
 
+
+// include CKeditor
+CKEDITOR.replace('editor1');
+

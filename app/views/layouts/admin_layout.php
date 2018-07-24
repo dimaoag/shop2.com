@@ -364,7 +364,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="<?=ADMIN?>/product">List of products</a></li>
-                        <li><a href="<?=ADMIN?>/product/add">Add category</a></li>
+                        <li><a href="<?=ADMIN?>/product/add">Add new product</a></li>
                     </ul>
                 </li>
                 <li>

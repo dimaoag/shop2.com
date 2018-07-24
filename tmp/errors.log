@@ -3022,3 +3022,120 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-20 13:49:18] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
         
 ====================='=
+[2018-07-23 17:40:12] Text error: Controller app\controllers\admin\ProductController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-07-23 17:40:30] Text error: Controller app\controllers\admin\ProductController not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 54 
+        
+====================='=
+[2018-07-23 18:23:37] Text error: Action app\controllers\admin\ProductController::viewAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-23 19:42:51] Text error: Class 'app\controllers\admin\R' not found | File: /var/www/shop2/app/controllers/admin/ProductController.php | Line: 34 
+        
+====================='=
+[2018-07-23 20:10:47] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:11:41] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:14:08] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:16:20] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:17:01] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:18:07] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:18:27] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:24:14] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:28:26] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:29:51] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:31:15] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:33:44] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:34:09] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:41:43] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:42:10] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:43:12] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:45:48] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:49:04] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:50:06] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:51:06] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:51:10] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:51:30] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:55:51] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:57:29] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:58:05] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:59:13] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 20:59:31] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 21:00:30] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 21:02:31] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 21:02:48] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 21:03:02] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-23 21:03:22] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-24 09:38:06] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-24 09:38:22] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'alias' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-24 09:52:09] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'old_price' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

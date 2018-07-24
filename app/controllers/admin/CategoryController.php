@@ -86,9 +86,6 @@ class CategoryController extends AdminController {
         App::$app->setProperty('parent_id', $category->parent_id);
 
 
-
-
-
         $this->setData(compact('category'));
         $this->setMeta("Edit category {$category->title}");
     }

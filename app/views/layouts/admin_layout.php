@@ -612,8 +612,9 @@
 <!-- ./wrapper -->
 
 <script>
-    var part = '<?=ADMIN?>',
-        adminPath = '<?=ADMIN?>';
+    var path = "<?=PATH?>",
+        public_path = "<?=PATH?>",
+        adminPath = "<?=ADMIN?>";
 </script>
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

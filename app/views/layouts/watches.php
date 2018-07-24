@@ -195,7 +195,7 @@
 
 <div class="preloader"><img src="/images/ring.svg" alt=""></div>
 <script>
-    var path = '<?=PATH?>';
+    var path = "<?=PATH?>";
 </script>
 
 <script src="/js/jquery-1.11.0.min.js"></script>

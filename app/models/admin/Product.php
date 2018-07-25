@@ -122,6 +122,28 @@ class Product extends AppModel {
         }
     }
 
+    public function editModificationProduct($id, $data){
+
+        \R::exec("DELETE FROM modification WHERE product_id = ?", [$id]);
+
+        $mod = [];
+        foreach ($data as $key => $value){
+            $arr = explode('_', $value);
+            $mod[$key]['color'] = $arr[0];
+            $mod[$key]['price'] = $arr[1];
+        }
+        $sql_values = '';
+        foreach ($mod as $key => $value){
+            $sql_values .= "($id,'" . $value['color'] ."'," . $value['price'] ."),";
+        }
+        $sql_values = rtrim($sql_values, ',');
+        \R::exec("INSERT INTO modification (product_id, title, price) VALUES $sql_values");
+        return;
+    }
+
+
+
+
     public function getImg(){
         if (!empty($_SESSION['single'])){
             $this->attributes['img'] = $_SESSION['single'];

@@ -12,7 +12,6 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-body">
-
                     <div class="register-main">
                         <div class="col-md-6 account-left">
                             <form method="post" action="<?=ADMIN?>/product/add" data-toggle="validator" role="form">
@@ -158,8 +157,39 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="box-footer">
-                                    <button type="submit" class="btn btn-success">Save</button>
+                                <div class="form-row">
+                                    <label>Modification product</label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-5">
+                                        <label for="in_color">Color</label>
+                                        <input type="text" class="form-control" id="in_color" placeholder="Color">
+                                    </div>
+                                    <div class="form-group col-md-3 has-feedback">
+                                        <label for="in_price">Price</label>
+                                        <input type="text" class="form-control" id="in_price"
+                                               pattern="^[0-9.]{1,}$"
+                                               data-error="Only numbers and dot"
+                                               placeholder="Price">
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true" style="margin-right: 20px"></span>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group col-md-1">
+                                        <label for="inputEmail4">Active</label>
+                                        <button class="btn btn-success" id="add">Add</button>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <hr>
+                                      <div class="out">
+
+                                      </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="form-group">
+<!--                                    <div class="box-footer">-->
+                                        <button type="submit" class="btn btn-block btn-success">Save</button>
+<!--                                    </div>-->
                                 </div>
                             </form>
                             <?php if (isset($_SESSION['form_data'])) unset($_SESSION['form_data']); ?>

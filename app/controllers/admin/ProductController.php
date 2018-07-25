@@ -46,6 +46,18 @@ class ProductController extends AdminController {
                 \R::store($prod);
                 $product->editFilter($id, $data);
                 $product->editRelatedProducts($id, $data);
+                if (!empty($data['mod'])){
+                    /*
+                      [mod] => Array
+                        (
+                            [0] => red_25
+                            [1] => green_30
+                            [2] => black_15
+                        )
+                    */
+                    $product->editModificationProduct($id, $data['mod']);
+                }
+
 
 
 

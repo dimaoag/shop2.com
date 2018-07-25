@@ -108,6 +108,56 @@
 
                                 <?php new \app\widgets\filter\Filter(null, WWW . '/filter/admin_filter_tpl.php'); ?>
 
+                                <div class="form-group">
+                                    <div class="col-md-4">
+                                        <div class="box box-danger box-solid file-upload">
+                                            <div class="box-header">
+                                                <h3 class="box-title">Base image</h3>
+                                            </div>
+                                            <div class="box-body">
+                                                 <div id="single" class="btn btn-success" data-url="/product/add-image" data-name="single">
+                                                     Choose image
+                                                 </div>
+                                                <p>
+                                                    <small>
+                                                    Recommended size:
+                                                    <?=\shop2\App::$app->getProperty('img_width'); ?>
+                                                     x
+                                                    <?=\shop2\App::$app->getProperty('img_height'); ?>
+                                                    </small>
+                                                </p>
+                                                <div class="single"></div>
+                                            </div>
+                                            <div class="overlay">
+                                                <i class="fa fa-refresh fa-spin"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="box box-primary box-solid file-upload">
+                                            <div class="box-header">
+                                                <h3 class="box-title">Gallery for product</h3>
+                                            </div>
+                                            <div class="box-body">
+                                                <div id="multi" class="btn btn-success" data-url="product/add-image" data-name="multi">
+                                                    Choose images
+                                                </div>
+                                                <p>
+                                                    <small>
+                                                        Recommended size:
+                                                        <?=\shop2\App::$app->getProperty('gallery_with'); ?>
+                                                        x
+                                                        <?=\shop2\App::$app->getProperty('gallery_height'); ?>
+                                                    </small>
+                                                </p>
+                                                <div class="multi"></div>
+                                            </div>
+                                            <div class="overlay">
+                                                <i class="fa fa-refresh fa-spin"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="box-footer">
                                     <button type="submit" class="btn btn-success">Save</button>
                                 </div>

@@ -8,4 +8,8 @@ return [
     'smtp_protocol' => 'SSL',
     'smtp_login' => 'testingoda@ukr.net',
     'smtp_password' => '1926odat',
+    'img_width' => 125,
+    'img_height' => 200,
+    'gallery_with' => 700,
+    'gallery_height' => 1000,
 ];

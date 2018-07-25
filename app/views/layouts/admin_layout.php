@@ -623,6 +623,9 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<script src="/js/ajaxupload.js"></script>
+
 <script>
     $.widget.bridge('uibutton', $.ui.button);
 </script>

@@ -3157,3 +3157,30 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-24 18:59:57] Text error: View /var/www/shop2/app/views/admin/Product/related-product.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
         
 ====================='=
+[2018-07-25 12:51:33] Text error: Action app\controllers\admin\ProductController::addImageAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-25 12:53:21] Text error: syntax error, unexpected '}' | File: /var/www/shop2/app/controllers/admin/ProductController.php | Line: 101 
+        
+====================='=
+[2018-07-25 12:53:51] Text error: syntax error, unexpected '}' | File: /var/www/shop2/app/controllers/admin/ProductController.php | Line: 101 
+        
+====================='=
+[2018-07-25 12:54:09] Text error: syntax error, unexpected '}' | File: /var/www/shop2/app/controllers/admin/ProductController.php | Line: 101 
+        
+====================='=
+[2018-07-25 12:54:49] Text error: Action app\controllers\admin\ProductController::addImageAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-25 13:25:54] Text error: View /var/www/shop2/app/views/admin/Product/add-image.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-07-25 13:45:50] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(44, 1c37bd50b53af82b923ead574e506e7e.png)(44, b915636ac3ca5b1e8bd1f9d75d4c9931.' at line 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-25 13:55:16] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(45, '1c37bd50b53af82b923ead574e506e7e.png')(45, 'b915636ac3ca5b1e8bd1f9d75d4c99' at line 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-25 14:07:13] Text error: Product not found | File: /var/www/shop2/app/controllers/ProductController.php | Line: 17 
+        
+====================='=

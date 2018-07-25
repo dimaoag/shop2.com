@@ -3,6 +3,7 @@ namespace app\controllers\admin;
 
 
 use app\models\admin\Product;
+use shop2\App;
 use shop2\libs\Pagination;
 use app\models\AppModel;
 
@@ -23,13 +24,13 @@ class ProductController extends AdminController {
 
 
     public function addAction(){
-
         if (!empty($_POST)){
             $product = new Product();
             $data = $_POST;
             $product->load($data);
             $product->attributes['status'] = $product->attributes['status'] ? '1' : '0';
             $product->attributes['hit'] = $product->attributes['hit'] ? '1' : '0';
+            $product->getImg();
             if (!$product->attributes['old_price']) $product->attributes['old_price'] = '0';
 
             if (!$product->validate($data)){
@@ -38,6 +39,7 @@ class ProductController extends AdminController {
                 redirect();
             }
             if ($id = $product->save('product')){
+                $product->saveGallery($id);
                 $alias = AppModel::createAlias('product', 'alias', $data['title'], $id);
                 $prod = \R::load('product', $id);
                 $prod->alias = $alias;
@@ -93,6 +95,30 @@ class ProductController extends AdminController {
         die;
     }
 
+    public function addImageAction(){
+        if (isset($_GET['upload'])){
+            if ($_POST['name'] == 'single'){
+                //single
+                $wmax = App::$app->getProperty('img_width');
+                $hmax = App::$app->getProperty('img_height');
+                $name = $_POST['name'];
+
+                $product = new Product();
+                $product->uploadImg($name, $wmax, $hmax);
+
+
+            } else {
+                //multi
+                $wmax = App::$app->getProperty('gallery_with');
+                $hmax = App::$app->getProperty('gallery_height');
+                $name = $_POST['name'];
+
+                $product = new Product();
+                $product->uploadImg($name, $wmax, $hmax);
+
+            }
+        }
+    }
 
 
 

@@ -43,6 +43,7 @@ class ProductController extends AdminController {
                 $prod->alias = $alias;
                 \R::store($prod);
                 $product->editFilter($id, $data);
+                $product->editRelatedProducts($id, $data);
 
 
 
@@ -60,4 +61,39 @@ class ProductController extends AdminController {
         $this->setData(compact('brands'));
 
     }
+
+
+    public function relatedProductAction(){
+        /*$data = [
+            'items' => [
+                [
+                    'id' => 1,
+                    'text' => 'Товар 1',
+                ],
+                [
+                    'id' => 2,
+                    'text' => 'Товар 2',
+                ],
+            ]
+        ];*/
+
+        $q = isset($_GET['q']) ? $_GET['q'] : '';
+
+        $data['items'] = [];
+        $products = \R::getAssoc('SELECT id, title FROM product WHERE title LIKE ? LIMIT 10', ["%{$q}%"]);
+        if($products){
+            $i = 0;
+            foreach($products as $id => $title){
+                $data['items'][$i]['id'] = $id;
+                $data['items'][$i]['text'] = $title;
+                $i++;
+            }
+        }
+        echo json_encode($data);
+        die;
+    }
+
+
+
+
 }

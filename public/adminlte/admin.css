@@ -44,3 +44,9 @@
 .overlay{
     display: none;
 }
+
+
+.del-img{
+    max-height: 150px !important;
+    cursor: pointer !important;
+}

@@ -35,9 +35,6 @@
                                         <?= $product['status'] ? 'Active' :  'Disabled';?>
                                     </td>
                                     <td>
-                                        <a href="<?=ADMIN?>/product/view?id=<?=$product['id']?>">
-                                            <i class="fa fa-fw fa-eye"></i>
-                                        </a>
                                         <a href="<?=ADMIN?>/product/edit?id=<?=$product['id']?>">
                                             <i class="fa fa-fw fa-edit"></i>
                                         </a>

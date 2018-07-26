@@ -64,7 +64,7 @@ class Product extends AppModel {
         //если фильтры изменились -> delete and insert new
         if (!empty($data['attributes'])){
             $result = array_diff($filter, $data['attributes']); //вернет разницу между масивами
-            if (!$result){
+            if ($result || count($filter) != count($data['attributes'])){
                 //delete
                 \R::exec("DELETE FROM attribute_product WHERE product_id = ?", [$id]);
 
@@ -81,6 +81,14 @@ class Product extends AppModel {
     }
 
 
+    /*
+     [related] => Array
+        (
+            [0] => 3
+            [1] => 5
+            [2] => 6
+        )
+     */
 
     public function editRelatedProducts($id, $data){
         $relatedProducts = \R::getCol("SELECT related_id FROM related_product WHERE product_id = ?", [$id]);
@@ -93,7 +101,7 @@ class Product extends AppModel {
         }
 
         //если связаные товары добавляются
-        if (empty($filter) && !empty($data['related'])){
+        if (empty($relatedProducts) && !empty($data['related'])){
             $sql_values = '';
             foreach ($data['related'] as $value){
                 $sql_values .= "($id, $value),";
@@ -125,6 +133,8 @@ class Product extends AppModel {
     public function editModificationProduct($id, $data){
 
         \R::exec("DELETE FROM modification WHERE product_id = ?", [$id]);
+
+        if (empty($data)) return;
 
         $mod = [];
         foreach ($data as $key => $value){

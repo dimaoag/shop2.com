@@ -3205,3 +3205,48 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-25 18:01:19] Text error: Page not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 57 
         
 ====================='=
+[2018-07-25 19:14:14] Text error: Action app\controllers\admin\ProductController::viewAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-25 19:14:25] Text error: View /var/www/shop2/app/views/admin/Product/edit.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=
+[2018-07-25 20:28:39] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'R' at line 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 08:58:01] Text error: Action app\controllers\admin\ProductController::deleteGalleryAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-26 08:58:08] Text error: Action app\controllers\admin\ProductController::deleteGalleryAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-26 09:06:01] Text error: Action app\controllers\admin\ProductController::deleteGalleryAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-26 09:06:16] Text error: Action app\controllers\admin\ProductController::deleteGalleryAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-26 09:22:35] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41-3' for key 'PRIMARY' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 09:30:44] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41-3' for key 'PRIMARY' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 09:30:51] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41-3' for key 'PRIMARY' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 09:31:31] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41-3' for key 'PRIMARY' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 09:52:49] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41-3' for key 'PRIMARY' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 09:52:51] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41-3' for key 'PRIMARY' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 09:57:00] Text error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41-3' for key 'PRIMARY' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=
+[2018-07-26 10:38:43] Text error: View /var/www/shop2/app/views/admin/Product/delete-image.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
+        
+====================='=

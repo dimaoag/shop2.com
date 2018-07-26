@@ -57,14 +57,7 @@ class ProductController extends AdminController {
                     */
                     $product->editModificationProduct($id, $data['mod']);
                 }
-
-
-
-
                 $_SESSION['success'] =  'Product is created';
-
-
-
             }
             redirect();
         }
@@ -75,6 +68,56 @@ class ProductController extends AdminController {
         $this->setData(compact('brands'));
 
     }
+
+    public function editAction(){
+        if (!empty($_POST)){
+            $id = $this->getRequestId(false);
+            $product = new Product();
+            $data = $_POST;
+            $product->load($data);
+            $product->attributes['status'] = $product->attributes['status'] ? '1' : '0';
+            $product->attributes['hit'] = $product->attributes['hit'] ? '1' : '0';
+            $product->getImg();
+            if (!$product->attributes['old_price']) $product->attributes['old_price'] = '0';
+            if (!$product->validate($data)){
+                $product->getErrors();
+                redirect();
+            }
+
+
+            if ($product->update('product', $id)){
+                $alias = AppModel::createAlias('product', 'alias', $data['title'], $id);
+                $prod = \R::load('product', $id);
+                $prod->alias = $alias;
+                \R::store($prod);
+                $product->editFilter($id, $data);
+                $product->editRelatedProducts($id, $data);
+                $product->saveGallery($id);
+                $product->editModificationProduct($id, $data['mod']);
+
+                $_SESSION['success'] =  'Product is updated';
+            }
+            redirect();
+        }
+
+
+
+        $id = $this->getRequestId();
+        $product = \R::load('product', $id);
+        App::$app->setProperty('parent_id', $product->category_id);
+        $filter = \R::getCol("SELECT attr_id FROM attribute_product WHERE product_id = ?", [$id]);
+        $related_products = \R::getAll("SELECT related_product.related_id, product.title FROM related_product JOIN product ON related_product.related_id = product.id WHERE related_product.product_id = ?", [$id]);
+        $gallery = \R::getCol("SELECT img FROM gallery WHERE product_id = ?", [$id]);
+        $brands = \R::getAssoc( 'SELECT id, title FROM brand' );
+        $modProducts = \R::getAll("SELECT title, price FROM modification WHERE product_id = ?", [$id]);
+
+
+        $this->setMeta('Edit product ' . $product->title);
+        $this->setData(compact('product', 'filter', 'related_products', 'gallery', 'brands', 'modProducts'));
+    }
+
+
+
 
 
     public function relatedProductAction(){
@@ -130,6 +173,30 @@ class ProductController extends AdminController {
 
             }
         }
+    }
+
+
+    public function deleteImageAction(){
+        $id = isset($_POST['id']) ? (int)$_POST['id'] : null;
+        $src = isset($_POST['src']) ? $_POST['src'] : null;
+        $type = isset($_POST['type']) ? $_POST['type'] : null;
+        if (!$id || !$src || !$type) return false;
+        if ($type == 'multi'){
+            if (\R::exec("DELETE FROM gallery WHERE product_id = ? AND img = ?", [$id, $src])){
+                @unlink(WWW . '/images/'. $src);
+                exit('1');
+            }
+        }
+        if ($type == 'single' && $src != 'no_image.jpg') {
+
+            @unlink(WWW . '/images/' . $src);
+            \R::exec("UPDATE `product` SET img = 'no_image.jpg' WHERE id = ? AND img = ?", [$id, $src]);
+            exit('1');
+        }
+        if ($type == 'single') {
+            exit('1');
+        }
+
     }
 
 

@@ -666,9 +666,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 
-<?php if (substr($_SERVER['REQUEST_URI'], 0, 18) == '/admin/product/add'): ?>
-    <script src="/js/upload_image.js"></script>
-<?php endif; ?>
 <script src="admin.js"></script>
 </body>
 </html>

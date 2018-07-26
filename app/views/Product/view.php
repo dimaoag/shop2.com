@@ -192,7 +192,7 @@
                 <!-- Related products end-->
 
                 <!-- Recently viewed products start-->
-                <?php if ($recentlyViewedProducts): ?>
+                <?php if (!empty($recentlyViewedProducts)): ?>
                     <div class="latestproducts">
                         <div class="product-one">
                             <h4>Recently viewed products: </h4>

@@ -3250,3 +3250,6 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-26 10:38:43] Text error: View /var/www/shop2/app/views/admin/Product/delete-image.php not found | File: /var/www/shop2/vendor/shop2/core/base/View.php | Line: 60 
         
 ====================='=
+[2018-07-26 11:43:01] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

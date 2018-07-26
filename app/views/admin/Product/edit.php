@@ -178,6 +178,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="clearfix"></div>
                                 <div class="form-row">
                                     <label>Modification product</label>
                                 </div>

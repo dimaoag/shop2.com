@@ -43,7 +43,7 @@ class CategoryController extends AppController {
         $start = $paginationObj->getStart();
         $isPagination = ($perpage <= $total) ? true : false;
 
-        $products = \R::find('product', "category_id IN ($catogoryChildren) $sql_filter LIMIT $start, $perpage");
+        $products = \R::find('product', "status = '1' AND category_id IN ($catogoryChildren) $sql_filter LIMIT $start, $perpage");
 
         if ($this->isAjax()){
             $this->loadView('filter_view', compact('products', 'pagination', 'isPagination'));

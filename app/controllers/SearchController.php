@@ -11,7 +11,7 @@ class SearchController extends AppController {
         if ($this->isAjax()){
             $query = !empty(trim($_GET['query'])) ? trim($_GET['query']) : null;
             if ($query){
-                $products = \R::getAll('SELECT id, title FROM product WHERE title LIKE ? LIMIT 10', ["%{$query}%"]);
+                $products = \R::getAll("SELECT id, title FROM product WHERE title LIKE ? AND status = '1' LIMIT 10", ["%{$query}%"]);
             }
             echo json_encode($products);
         }
@@ -25,14 +25,14 @@ class SearchController extends AppController {
         if ($query){
             $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
             $perpage = App::$app->getProperty('pagination');
-            $total = \R::count('product', 'title LIKE ?', ["%{$query}%"]);
+            $total = \R::count('product', "title LIKE ? AND status = '1'", ["%{$query}%"]);
             $paginationObj = new Pagination($page, $perpage, $total);
             $pagination  = $paginationObj->getHtml();
             $start = $paginationObj->getStart();
             $isPagination = ($perpage <= $total) ? true : false;
 
 
-            $products = \R::find('product', 'title LIKE ? LIMIT ?, ?', ["%{$query}%", $start, $perpage]);
+            $products = \R::find('product', "title LIKE ? AND status = '1' LIMIT ?, ?", ["%{$query}%", $start, $perpage]);
         }
 
 

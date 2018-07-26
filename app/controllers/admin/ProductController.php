@@ -23,6 +23,8 @@ class ProductController extends AdminController {
     }
 
 
+
+
     public function addAction(){
         if (!empty($_POST)){
             $product = new Product();
@@ -61,13 +63,13 @@ class ProductController extends AdminController {
             }
             redirect();
         }
-
         $brands = \R::getAssoc( 'SELECT id, title FROM brand' );
-
         $this->setMeta('Add new product');
         $this->setData(compact('brands'));
 
     }
+
+
 
     public function editAction(){
         if (!empty($_POST)){
@@ -83,8 +85,6 @@ class ProductController extends AdminController {
                 $product->getErrors();
                 redirect();
             }
-
-
             if ($product->update('product', $id)){
                 $alias = AppModel::createAlias('product', 'alias', $data['title'], $id);
                 $prod = \R::load('product', $id);
@@ -99,9 +99,6 @@ class ProductController extends AdminController {
             }
             redirect();
         }
-
-
-
         $id = $this->getRequestId();
         $product = \R::load('product', $id);
         App::$app->setProperty('parent_id', $product->category_id);
@@ -111,9 +108,28 @@ class ProductController extends AdminController {
         $brands = \R::getAssoc( 'SELECT id, title FROM brand' );
         $modProducts = \R::getAll("SELECT title, price FROM modification WHERE product_id = ?", [$id]);
 
-
         $this->setMeta('Edit product ' . $product->title);
         $this->setData(compact('product', 'filter', 'related_products', 'gallery', 'brands', 'modProducts'));
+    }
+
+
+
+
+    public function deleteAction(){
+        $id = $this->getRequestId();
+        $product = \R::findOne('product', "id = ?", [$id]);
+        if ($product->img != 'no_image.jpg'){
+            @unlink(WWW . '/images/' . $product->img);
+        }
+        $gallery = \R::getCol("SELECT img FROM gallery WHERE product_id = ?", [$id]);
+        if (!empty($gallery)){
+            foreach ($gallery as $img){
+                @unlink(WWW . '/images/' . $img);
+            }
+        }
+        \R::exec("DELETE FROM product WHERE id = ?", [$id]);
+        $_SESSION['success'] =  'Product is deleted';
+        redirect();
     }
 
 
@@ -150,6 +166,9 @@ class ProductController extends AdminController {
         die;
     }
 
+
+
+
     public function addImageAction(){
         if (isset($_GET['upload'])){
             if ($_POST['name'] == 'single'){
@@ -157,23 +176,21 @@ class ProductController extends AdminController {
                 $wmax = App::$app->getProperty('img_width');
                 $hmax = App::$app->getProperty('img_height');
                 $name = $_POST['name'];
-
                 $product = new Product();
                 $product->uploadImg($name, $wmax, $hmax);
-
-
             } else {
                 //multi
                 $wmax = App::$app->getProperty('gallery_with');
                 $hmax = App::$app->getProperty('gallery_height');
                 $name = $_POST['name'];
-
                 $product = new Product();
                 $product->uploadImg($name, $wmax, $hmax);
 
             }
         }
     }
+
+
 
 
     public function deleteImageAction(){

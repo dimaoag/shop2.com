@@ -3253,3 +3253,12 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-26 11:43:01] Text error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause' | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
         
 ====================='=
+[2018-07-26 16:31:17] Text error: Action app\controllers\admin\FilterController::editAction not found | File: /var/www/shop2/vendor/shop2/core/Router.php | Line: 51 
+        
+====================='=
+[2018-07-26 17:30:37] Text error: Invalid type: attribute_group | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Util/DispenseHelper.php | Line: 77 
+        
+====================='=
+[2018-07-26 17:31:37] Text error: Invalid type: attribute_group | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Util/DispenseHelper.php | Line: 77 
+        
+====================='=

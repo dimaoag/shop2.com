@@ -387,6 +387,32 @@
                         <li><a href="<?=ADMIN?>/user/add">Add user</a></li>
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-usd"></i>
+                        <span>Currency</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="<?=ADMIN?>/currency">Currencies</a></li>
+                        <li><a href="<?=ADMIN?>/currency/add">Add new currency</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-filter"></i>
+                        <span>Filter</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="<?=ADMIN?>/filter/attribute-group">Groups of filters</a></li>
+                        <li><a href="<?=ADMIN?>/filter/attribute">Filters</a></li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->

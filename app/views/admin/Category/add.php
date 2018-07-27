@@ -3,7 +3,7 @@
     <ol class="breadcrumb">
         <li><a href="<?=ADMIN?>"><i class="fa fa-dashboard"></i>Home</a></li>
         <li><a href="<?=ADMIN?>/category"><i class="fa fa-dashboard"></i>Categories</a></li>
-        <li class="active">New category</a></li>
+        <li class="active">New category</li>
     </ol>
 </section>
 

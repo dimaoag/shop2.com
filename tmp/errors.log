@@ -3316,3 +3316,6 @@ JOIN `order_product` ON' at line 1 | File: /var/www/shop2/vendor/gabordemooij/re
 [2018-07-27 16:17:28] Text error: Page not found | File: /var/www/shop2/app/controllers/admin/AdminController.php | Line: 29 
         
 ====================='=
+[2018-07-27 18:18:20] Text error: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'base' at row 1 | File: /var/www/shop2/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php | Line: 188 
+        
+====================='=

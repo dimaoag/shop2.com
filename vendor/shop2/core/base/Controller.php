@@ -45,9 +45,9 @@ abstract class Controller
      * @param string $keywords
      */
     public function setMeta($title = '', $desc = '', $keywords = ''){
-        $this->meta['title'] = $title;
-        $this->meta['desc'] = $desc;
-        $this->meta['keywords'] = $keywords;
+        $this->meta['title'] = htmlSpecialCharsWrapper($title);
+        $this->meta['desc'] = htmlSpecialCharsWrapper($desc);
+        $this->meta['keywords'] = htmlSpecialCharsWrapper($keywords);
     }
 
 

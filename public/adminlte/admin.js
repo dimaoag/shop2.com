@@ -174,3 +174,16 @@ function out() {
     }
     $('.out').html(out);
 }
+
+
+// check input before submit isNum
+$('#form_id').on('submit', function () {
+    if (!isNumeric($('#category_id'))){
+        alert('Choose category');
+        return false;
+    }
+});
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}

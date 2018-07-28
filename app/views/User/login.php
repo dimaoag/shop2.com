@@ -27,7 +27,7 @@
                                 <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
                             </div>
                         <?php endif; ?>
-                        <h2>Sign in</h2>
+                        <h2>Login</h2>
                     </div>
                     <div class="register-main">
                         <div class="col-md-6 account-left">

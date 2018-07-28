@@ -22,7 +22,7 @@ class UserController extends AppController {
                 $user->save('user');
                 if (!isset($_POST['role'])){
                     if ($user->login()) {
-                        redirect(PATH . '/');
+                        redirect(PATH . '/user/cabinet');
                         $_SESSION['success'] = 'Success!';
                     } else {
                         $_SESSION['errors'][] = 'Error. Try again.';
@@ -49,16 +49,15 @@ class UserController extends AppController {
                 unset($_SESSION['cart_sum']);
                 unset($_SESSION['cart_currency']);
             }
-
             $user = new User();
             if ($user->login()){
                 $_SESSION['success'] = 'Success!';
+                redirect(PATH . '/user/cabinet');
             } else {
-                $_SESSION['errors'][] = 'Error! Login or password incorrect.';
+                $_SESSION['errors'] = 'Error! Login or password incorrect.';
             }
             redirect();
         }
-
         $this->setMeta('Log In');
     }
 
@@ -82,7 +81,48 @@ class UserController extends AppController {
 
 
     public function cabinetAction(){
+        if (!User::isAuth()) redirect();
 
+        $this->setMeta('Cabinet');
+    }
+
+
+    public function editAction(){
+        if (!User::isAuth()) redirect('/user/login');
+        if (!empty($_POST)){
+            $user = new \app\models\admin\User();
+            $data = $_POST;
+            $data['id'] = $_SESSION['user']['id'];
+            $data['role'] = $_SESSION['user']['role'];
+            $user->load($data);
+            if (!$user->attributes['password']){
+                unset($user->attributes['password']);
+            } else {
+                $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
+            }
+            if (!$user->validate($data) || !$user->isUnique()){
+                $user->getErrors();
+                redirect();
+            }
+            if ($user->update('user', $_SESSION['user']['id'])){
+                foreach ($user->attributes as $key => $value){
+                    if ($key != 'password') $_SESSION['user'][$key] = $value;
+                }
+                $_SESSION['success'] = 'Data is saved';
+            }
+            redirect();
+        }
+        $this->setMeta('Edit profile');
+    }
+
+    public function ordersAction(){
+        if (!User::isAuth()) redirect('/user/login');
+
+        $user_id = $_SESSION['user']['id'];
+        $orders = \R::findAll('order', "user_id = ?", [$user_id]);
+
+        $this->setMeta('Orders of user');
+        $this->setData(compact('orders'));
     }
 
 }

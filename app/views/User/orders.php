@@ -1,16 +1,34 @@
-<section class="content-header">
-    <h1>Orders of <?=$user->login?></h1>
-    <ol class="breadcrumb">
-        <li><a href="<?=ADMIN?>"><i class="fa fa-dashboard"></i>Home</a></li>
-        <li><a href="<?=ADMIN?>/user"><i class="fa fa-dashboard"></i>All Users</a></li>
-        <li class="active">Orders of <?=$user->login?></li>
-    </ol>
-</section>
+<!--start-breadcrumbs-->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs-main">
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="/user/cabinet">Cabinet</a></li>
+                <li>Orders</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--end-breadcrumbs-->
 
-<section class="content">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="box">
+<div class="prdt">
+    <div class="container">
+        <div class="prdt-top">
+            <div class="col-md-12 prdt-left">
+                <?php if (isset($_SESSION['errors'])): ?>
+                    <div class="alert alert-danger">
+                        <?php echo $_SESSION['errors']; unset($_SESSION['errors']); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['success'])): ?>
+                    <div class="alert alert-success">
+                        <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+                    </div>
+                <?php endif; ?>
+                <div class="register-top heading">
+                    <h2>Orders</h2>
+                </div>
                 <div class="box-body">
                     <?php if ($orders):?>
                         <div class="table-responsive">
@@ -22,16 +40,15 @@
                                     <th>Total</th>
                                     <th>Created_at</th>
                                     <th>Updated_at</th>
-                                    <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php foreach ($orders as $order):?>
                                     <?php
-                                    if ($order['status'] == 1){
+                                    if ($order->status == 1){
                                         $class = 'success';
                                         $text = 'Closed';
-                                    } elseif ($order['status'] == 2){
+                                    } elseif ($order->status == 2){
                                         $class = 'info';
                                         $text = 'Payment';
                                     } else {
@@ -40,16 +57,11 @@
                                     }
                                     ?>
                                     <tr class="<?=$class?>">
-                                        <td><?=$order['id']?></td>
-                                        <td><?=$text;?></td>
-                                        <td><?=$order['sum']?></td>
-                                        <td><?=$order['date']?></td>
-                                        <td><?=$order['update_at']?></td>
-                                        <td>
-                                            <a href="<?=ADMIN?>/order/view?id=<?=$order['id']?>">
-                                                <i class="fa fa-fw fa-eye"></i>
-                                            </a>
-                                        </td>
+                                        <td><?=$order->id;?></td>
+                                        <td><?=$text?></td>
+                                        <td><?=$order->sum;?> <?=$order->currency;?></td>
+                                        <td><?=$order->date;?></td>
+                                        <td><?=$order->update_at;?></td>
                                     </tr>
                                 <?php endforeach;?>
                                 </tbody>
@@ -63,4 +75,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

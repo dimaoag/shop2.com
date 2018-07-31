@@ -5,4 +5,6 @@ vendor/*
 !/vendor/shop2/
 Vagrantfile
 provision.sh
+setting.txt
+
 

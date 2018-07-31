@@ -8,9 +8,9 @@
         </li>
     </ul>
     <div class="tab-content">
-        <?php if(!empty($this->attributes[$group_id])): ?>
             <?php $i = 1; foreach($this->groups as $group_id => $group_item): ?>
                 <div class="tab-pane<?php if($i == 1) echo ' active' ?>" id="tab_<?= $group_id ?>">
+                    <?php if(!empty($this->attributes[$group_id])): ?>
                     <?php foreach($this->attributes[$group_id] as $attr_id => $value): ?>
                         <?php
                         if(!empty($this->filter) && in_array($attr_id, $this->filter)){
@@ -25,8 +25,8 @@
                             </label>
                         </div>
                         <?php $i++; endforeach; ?>
+                    <?php endif; ?>
                 </div>
             <?php endforeach; ?>
-        <?php endif; ?>
     </div>
 </div>

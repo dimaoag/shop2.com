@@ -75,7 +75,7 @@ class UserController extends AppController {
             unset($_SESSION['cart_sum']);
             unset($_SESSION['cart_currency']);
         }
-        redirect();
+        redirect(PATH);
     }
 
 

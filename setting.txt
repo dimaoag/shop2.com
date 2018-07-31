@@ -1,0 +1,24 @@
+Для доступа по FTP используйте следующие реквизиты:
+Сервер: testho08.ftp.tools
+Логин: testho08_ftp
+Пароль: bWQp2apx
+
+
+Для доступа к MySQL используйте:
+Имя базы данных: testho08_db
+Логин: testho08_db
+Пароль: 2shdT3tr
+Сервер: testho08.mysql.tools
+
+
+Webmail адрес:	https://webmail.adm.tools/
+Имя пользователя:	test@testhost124.site
+Пароль: test1926
+POP3/IMAP сервер:	mail.adm.tools
+POP3 порт:	110 или 995 (POP3+SSL)
+IMAP порт:	143 или 993 (IMAP4+SSL)
+SMTP сервер:	mail.adm.tools
+SMTP порт:	25 или 2525 или 465 (SMTP+SSL)
+
+
+
